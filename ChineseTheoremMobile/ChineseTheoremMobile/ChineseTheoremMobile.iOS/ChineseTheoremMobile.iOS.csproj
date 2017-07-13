@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B266257E-873F-4810-B21C-ACB42840E6E5}</ProjectGuid>
+    <ProjectGuid>{F232D418-9DD7-4938-95E8-C28EDDD042F0}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>ChineseTheoremMobile.iOS</RootNamespace>
@@ -139,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChineseTheoremMobile\ChineseTheoremMobile.csproj">
-      <Project>{3412cab8-ae68-4ab0-9c1b-b54536371940}</Project>
+      <Project>{beb6ea03-2d68-4a2c-8215-8f61f2678b1b}</Project>
       <Name>ChineseTheoremMobile</Name>
     </ProjectReference>
   </ItemGroup>

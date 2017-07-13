@@ -11,8 +11,8 @@
 namespace ChineseTheoremMobile {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("f:\\users\\user\\documents\\visual studio 2015\\Projects\\ChineseTheoremMobile\\ChineseT" +
-        "heoremMobile\\ChineseTheoremMobile\\App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheorem\\ChineseTheoremMobile\\ChineseTheoremMobile\\Ch" +
+        "ineseTheoremMobile\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

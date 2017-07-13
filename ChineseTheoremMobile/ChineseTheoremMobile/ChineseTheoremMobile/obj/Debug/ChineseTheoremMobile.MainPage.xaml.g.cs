@@ -11,9 +11,9 @@
 namespace ChineseTheoremMobile {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("f:\\users\\user\\documents\\visual studio 2015\\Projects\\ChineseTheoremMobile\\ChineseT" +
-        "heoremMobile\\ChineseTheoremMobile\\MainPage.xaml")]
-    public partial class MainPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheorem\\ChineseTheoremMobile\\ChineseTheoremMobile\\Ch" +
+        "ineseTheoremMobile\\MainPage.xaml")]
+    public partial class MainPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
