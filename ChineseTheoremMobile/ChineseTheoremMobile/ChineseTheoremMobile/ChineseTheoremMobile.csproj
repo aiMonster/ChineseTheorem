@@ -47,9 +47,6 @@
     <Compile Include="InstructionPage.xaml.cs">
       <DependentUpon>InstructionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LanguageController.cs" />
-    <Compile Include="LanguageLibrary.cs" />
-    <Compile Include="LanguageModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

@@ -12,12 +12,12 @@ namespace ChineseTheoremMobile
         public MainPage()
         {
             InitializeComponent();
-            setLanguage(LanguageLibrary.Ukrainian());
+            //setLanguage(LanguageLibrary.Ukrainian());
         }
 
-        public void setLanguage(LanguageModel model)
-        {
-            BindingContext = new LanguageController(model);
-        }
+        //public void setLanguage(LanguageModel model)
+        //{
+        //    BindingContext = new LanguageController(model);
+        //}
     }
 }

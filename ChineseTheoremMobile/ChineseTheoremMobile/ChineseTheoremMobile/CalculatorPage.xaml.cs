@@ -16,5 +16,10 @@ namespace ChineseTheoremMobile
         {
             InitializeComponent();
         }
+
+        private void btnDecide_Clicked(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
