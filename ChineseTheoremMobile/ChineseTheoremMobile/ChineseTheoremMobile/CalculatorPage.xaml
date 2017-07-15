@@ -6,18 +6,19 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
             
-            <StackLayout Orientation="Horizontal" Margin="0,10" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                    <Button Text="Add row" BackgroundColor="#A9FFAC"/>
+                    <Button x:Name="btnAddRow" Text="Add row" Clicked="btnAddRow_Clicked" BackgroundColor="#A9FFAC"/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                    <Button Text="Remove row" BackgroundColor="#FF7172"/>
+                    <Button x:Name="btnRemoveRow" Text="Remove row" Clicked="btnRemoveRow_Clicked"  BackgroundColor="#FF7172"/>
                 </StackLayout>
             </StackLayout>
-            
-            
-            <ScrollView VerticalOptions="FillAndExpand" >
-                <StackLayout>
+
+            <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,5,0,10"/>
+
+            <ScrollView x:Name="svForRowsToCalculate" VerticalOptions="FillAndExpand" >
+                <StackLayout x:Name="slRowsToCalculate">
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                         <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
@@ -29,18 +30,18 @@
                     
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                         <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" b1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" b2 "  FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
 
                         <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" p1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" p2 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
                     </StackLayout>
                     
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                         <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" b1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" b3 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
 
                         <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" p1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" p4 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
                     </StackLayout>                 
 
                 </StackLayout>
@@ -49,7 +50,7 @@
         <StackLayout VerticalOptions="End">
 
                 <Button x:Name="btnDecide" Clicked="btnDecide_Clicked" Text="Decide" BackgroundColor="#7A85E8" FontSize="Medium"/>
-                <Label Text="Left 5 attempts" HorizontalOptions="Center" FontSize="Large" Margin="0,0,0,5"/>
+                <Label Text="Left 5 attempts" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,0,0,10"/>
                 
         </StackLayout>
         </StackLayout>
