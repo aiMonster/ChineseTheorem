@@ -12,9 +12,25 @@ namespace ChineseTheoremMobile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InstructionPage : ContentPage
     {
+        
+
         public InstructionPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
+
+        //private void btnEnglish_Clicked(object sender, EventArgs e)
+        //{
+        //    btnUkrainian.IsEnabled = true;
+        //    btnEnglish.IsEnabled = false;
+        //    BindingContext = new LanguageController(LanguageLibrary.English());
+        //}
+
+        //private void btnUkrainian_Clicked(object sender, EventArgs e)
+        //{
+        //    btnUkrainian.IsEnabled = false;
+        //    btnEnglish.IsEnabled = true;
+        //    BindingContext = new LanguageController(LanguageLibrary.Ukrainian());
+        //}
     }
 }
