@@ -4,7 +4,7 @@
              x:Class="ChineseTheoremMobile.CalculatorPage"
              Title="decide">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
             
             <StackLayout Orientation="Horizontal" Margin="0,10,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
@@ -15,33 +15,36 @@
                 </StackLayout>
             </StackLayout>
 
-            <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,5,0,10"/>
+
+            <Button x:Name="btnFillByRandom" Clicked="btnFillByRandom_Clicked" Text="Fill by random" BackgroundColor="##FFB74D" Margin="0,5,0,0"/>
+            <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+            
 
             <ScrollView x:Name="svForRowsToCalculate" VerticalOptions="FillAndExpand" >
                 <StackLayout x:Name="slRowsToCalculate">
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                         <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" b1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" b1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
 
                         <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" p1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" p1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
                     </StackLayout>
                     
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                         <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" b2 "  FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" b2 "  FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
 
                         <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" p2 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" p2 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
                     </StackLayout>
                     
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                         <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" b3 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" b3 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
 
                         <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
-                        <Entry Placeholder=" p4 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry Placeholder=" p4 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
                     </StackLayout>                 
 
                 </StackLayout>

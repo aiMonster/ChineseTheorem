@@ -22,6 +22,9 @@ namespace ChineseTheoremMobile {
         private global::Xamarin.Forms.Button btnRemoveRow;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnFillByRandom;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ScrollView svForRowsToCalculate;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -35,6 +38,7 @@ namespace ChineseTheoremMobile {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CalculatorPage));
             btnAddRow = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnAddRow");
             btnRemoveRow = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnRemoveRow");
+            btnFillByRandom = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnFillByRandom");
             svForRowsToCalculate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "svForRowsToCalculate");
             slRowsToCalculate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "slRowsToCalculate");
             btnDecide = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnDecide");
