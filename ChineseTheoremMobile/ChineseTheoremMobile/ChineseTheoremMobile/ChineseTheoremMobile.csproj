@@ -41,6 +41,7 @@
     <Compile Include="CalculatorPage.xaml.cs">
       <DependentUpon>CalculatorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="expressionModel.cs" />
     <Compile Include="HistoryPage.xaml.cs">
       <DependentUpon>HistoryPage.xaml</DependentUpon>
     </Compile>
@@ -50,6 +51,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="nsdCalculator.cs" />
     <Compile Include="PromoCodePage.xaml.cs">
       <DependentUpon>PromoCodePage.xaml</DependentUpon>
     </Compile>

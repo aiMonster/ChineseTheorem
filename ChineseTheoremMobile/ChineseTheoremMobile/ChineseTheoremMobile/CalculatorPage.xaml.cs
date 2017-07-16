@@ -17,11 +17,11 @@ namespace ChineseTheoremMobile
             InitializeComponent();
         }
 
-        private void btnDecide_Clicked(object sender, EventArgs e)
+        private async void btnDecide_Clicked(object sender, EventArgs e)
         {
             //amount rows in expression
             int amountElements = 0;
-            foreach(var x in slRowsToCalculate.Children)
+            foreach (var x in slRowsToCalculate.Children)
             {
                 amountElements++;
             }
@@ -38,16 +38,16 @@ namespace ChineseTheoremMobile
             int rowCounter = 1;
             foreach (StackLayout row in slRowsToCalculate.Children)
             {
-                int innerCounter = 0;                
+                int innerCounter = 0;
                 foreach (var num in row.Children)
                 {
                     if (innerCounter == 1)
                     {
                         Entry tmpE = num as Entry;
                         tmp_b = tmpE.Text;
-                        if(tmp_b == null || tmp_b == "" || tmp_b == "0")
+                        if (tmp_b == null || tmp_b == "" || tmp_b == "0")
                         {
-                            DisplayAlert("Caution", "b" + Convert.ToString(rowCounter) + " - is not filled or = 0", "ОK");
+                            await DisplayAlert("Caution", "b" + Convert.ToString(rowCounter) + " - is not filled or = 0", "ОK");
                             return;
                         }
                     }
@@ -55,14 +55,14 @@ namespace ChineseTheoremMobile
                     {
                         Entry tmpE = num as Entry;
                         tmp_p = tmpE.Text;
-                        if(tmp_p == null || tmp_p == "" || tmp_p == "0")
+                        if (tmp_p == null || tmp_p == "" || tmp_p == "0")
                         {
-                            DisplayAlert("Caution", "p" + Convert.ToString(rowCounter) + " - is not filled or = 0", "ОK");
+                            await DisplayAlert("Caution", "p" + Convert.ToString(rowCounter) + " - is not filled or = 0", "ОK");
                             return;
                         }
 
                     }
-                    innerCounter++;                    
+                    innerCounter++;
                 }
 
                 numbers_b[rowCounter] = Convert.ToInt32(tmp_b);
@@ -71,35 +71,95 @@ namespace ChineseTheoremMobile
                 rowCounter++;
             }
             //end checking on free cells
-            
-      
+
+
             //checking if b > p
-            for(int i = 1; i <= amountElements; i++)
+            for (int i = 1; i <= amountElements; i++)
             {
-                if(numbers_b[i] >= numbers_p[i])
+                if (numbers_b[i] >= numbers_p[i])
                 {
-                    DisplayAlert("Caution", "b" + i + " >= p" + i + " is not allowed", "ОK");
+                    await DisplayAlert("Caution", "b" + i + " >= p" + i + " is not allowed", "ОK");
                     return;
-                }                
+                }
             }
             //end checking if b > p
 
-            
-            //checking on 'both primes'
 
-            //here some code
+            //checking on 'both primes'            
+            for (int i = 1; i <= amountElements; i++)
+            {
+                for (int y = i + 1; y <= amountElements; y++)
+                {
+                    expressionModel model = nsdCalculator.Count(numbers_p[i], numbers_p[y]);
+                    if (model.nsd > 1)
+                    {
+                        await DisplayAlert("Caution", "Numbers in " + i + " and " + y + " rows are 'Both primes'", "ОK");
+                        return;
+                    }
+                }
 
-            //end checking on 'both primes'
+            }
+            //DisplayAlert("Caution", "Perfect", "ОK");
 
-            ///////////////////////////////// END CHECKING //////////////////////////////////
+            string result = "";
+            for (int i = 1; i <= amountElements; i++)
+            {
+                result += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
+            }
 
-            //deciding and writing to data base
+            bool answer = await DisplayAlert("Is expression correct?", result, "It's ok", "Cancel");
+            if(answer == true)
+            {
+                //clearing old numbers
+                rowCounter = 1;
+                foreach (StackLayout row in slRowsToCalculate.Children)
+                {
+                    int innerCounter = 0;
+                    foreach (var num in row.Children)
+                    {
+                        if (innerCounter == 1 || innerCounter == 3)
+                        {
+                            Entry tmpE = num as Entry;
+                            tmpE.Text = "";                            
+                        }                        
+                        innerCounter++;
+                    }                   
+                    rowCounter++;
+                }
+
+                //counting expression and adding it to the history
+
+                bool success = true;
+
+                if(success == true)
+                {
+                    await DisplayAlert("Notification", "Expression succesfully decided and added to history", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Notification", "There were some problems with your expression, write to developer to return money", "OK");
+                }
+
+                //here some code
+
+                //end checking on 'both primes'
+
+                ///////////////////////////////// END CHECKING //////////////////////////////////
+
+                //deciding and writing to data base
 
 
 
-
+            }
 
         }
+        
+
+
+
+
+
+    
 
         private void btnRemoveRow_Clicked(object sender, EventArgs e)
         {
@@ -180,7 +240,81 @@ namespace ChineseTheoremMobile
 
         private void btnFillByRandom_Clicked(object sender, EventArgs e)
         {
-            
+            int amountElements = 0;
+            foreach (var x in slRowsToCalculate.Children)
+            {
+                amountElements++;
+            }
+
+            //our numbers
+            int[] numbers_p = new int[amountElements + 1];
+
+
+
+            //filling only b numbers
+            int rowCounter = 1;
+            foreach (StackLayout row in slRowsToCalculate.Children)
+            {
+                int innerCounter = 0;
+                foreach (var num in row.Children)
+                {
+                    if (innerCounter == 1)
+                    {
+                        Entry tmpE = num as Entry;                        
+                        Random rnd = new Random();
+                        tmpE.Text = Convert.ToString(rnd.Next(1,50));
+                    }
+                    
+                    innerCounter++;
+                }               
+                rowCounter++;
+            }
+
+            //filling p numbers
+            int tmp_b = 0;
+            rowCounter = 1;
+            foreach (StackLayout row in slRowsToCalculate.Children)
+            {
+                int innerCounter = 0;
+                foreach (var num in row.Children)
+                {
+                    if(innerCounter == 1)
+                    {
+                        Entry tmpE = num as Entry;
+                        tmp_b = Convert.ToInt32(tmpE.Text);
+                    }
+                    if (innerCounter == 3)
+                    {
+                        Entry tmpE = num as Entry;
+                        Random rnd = new Random();
+                        while(true)
+                        {
+                            Start:
+                            int tmpRand = rnd.Next(50, 100);
+                            if(tmpRand <= tmp_b)
+                            {
+                                goto Start;
+                            }
+
+                            for(int i = rowCounter - 1; i > 0; i--)
+                            {
+                                expressionModel model = nsdCalculator.Count(numbers_p[i], tmpRand);
+                                if (model.nsd > 1)
+                                {
+                                    goto Start;
+                                }
+                            }
+                            tmpE.Text = Convert.ToString(tmpRand);
+                            numbers_p[rowCounter] = tmpRand;
+                            break;                          
+                        }
+                        
+                    }
+
+                    innerCounter++;
+                }
+                rowCounter++;
+            }
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
