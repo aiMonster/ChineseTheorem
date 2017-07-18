@@ -13,9 +13,9 @@ namespace ChineseTheoremMobile
             expressionModel model = new expressionModel();
 
             int p, q, nsd;
-            bool tf; // Ùîá çíàòè â ÿê³é ïîñë³äîâíîñò³ âèâåñòè íà åêðàí q òà p
+            bool tf; //  to know how to display than p and q
 
-            // Ñòâîðþºìî ìàñèâè, ÿê³ áóäåìî âèêîðèñòîâóâàòè ÿê òèì÷àñîâ³ çì³íí³, òà çì³ííó ³, ùîá ìè ¿¿ çìîãëè âèâåñòè ï³ñëÿ öèêëó
+            // arrays to store data
             int[] ar = new int[50];
             int[] br = new int[50];
             int[] cr = new int[50];
@@ -26,7 +26,7 @@ namespace ChineseTheoremMobile
             int i = 1;
             cr[0] = 1;
 
-            // Äëÿ çðó÷í³øîãî êîèñòóâàííÿ ïèñâîþºìî ìàñèâó à[] á³ëüøå ÷èñëî, à ìàñèâó â[] ìåíøå ÷èñëî 
+            //it will be better to store in a[]-bigger and in b[]-lower number
             if (a1 > b1)
             {
                 ar[1] = a1;
@@ -41,7 +41,7 @@ namespace ChineseTheoremMobile
             }
 
 
-            // ßêùî îäíå ç ÷èñåë º ÍÑÄ ³íøîãî ÷èñëà, âèâîäèìî öå ÷èñëî
+            // if one number is NSD of second - displaing it and finishing job
             if (ar[1] % br[1] == 0)
             {
                 nsd = br[1];
@@ -63,6 +63,7 @@ namespace ChineseTheoremMobile
                 model.p = p;
                 model.q = q;
                 model.nsd = nsd;
+                model.nsd_full += ar[1] + " = " + br[1] + "*" + br[1] + " + 0";
                 return model;
 
                 //return nsd, p, q;
@@ -77,6 +78,7 @@ namespace ChineseTheoremMobile
                     dr[i] = ar[i] / br[i] / -1; // Just for next step
                     ar[i + 1] = br[i];
                     br[i + 1] = cr[i];
+                    model.nsd_full += ar[i] + " = " + br[i] + "*" + Math.Abs(dr[i]) + " + " + cr[i] + "\n";
                     i++;
                 }
                 nsd = cr[i - 2];
@@ -85,7 +87,11 @@ namespace ChineseTheoremMobile
 
 
 
-
+            int[] ddr = new int[50];
+            for (int ii = 0; ii < 50; ii++)
+            {
+                ddr[ii] = dr[ii];
+            }
 
 
 
@@ -113,16 +119,31 @@ namespace ChineseTheoremMobile
                 pr[1] = 1;
                 pr[2] = dr[1];
                 dr[i - 1] = 1;
+                model.p_and_q_full += nsd + " = " + ar[i - 2] + " - " + br[i - 2] + "*" + Math.Abs(dr[i - 2]);
                 for (; i != 3; i--)
 
                 {
                     pr[i - 2] = dr[i - 1] + dr[i - 2] * dr[i - 3];
                     pr[i - 3] = dr[i - 2];
                     dr[i - 3] = pr[i - 2];
+
+                    //here we are writing our how we decided our expression
+                    if (dr[i - 1] < 0)
+                    {
+                        model.p_and_q_full += " =\n= " + Math.Abs(dr[i - 2]) + "*(" + ar[i - 3] + " - " + br[i - 3] + "*" + Math.Abs(ddr[i - 3]) + ")" + " - " + ar[i - 2] + "*" + Math.Abs(dr[i - 1]);
+                        model.p_and_q_full += " =\n= " + Math.Abs(dr[i - 2]) + "*" + ar[i - 3] + " - " + br[i - 3] + "*" + (Math.Abs(dr[i - 2]) * Math.Abs(ddr[i - 3])) + " - " + ar[i - 2] + "*" + Math.Abs(dr[i - 1]);
+                        model.p_and_q_full += " =\n= " + Math.Abs(dr[i - 2]) + "*" + ar[i - 3] + " - " + ((Math.Abs(dr[i - 2]) * Math.Abs(ddr[i - 3])) + Math.Abs(dr[i - 1])) + "*" + ar[i - 2];
+                    }
+                    else
+                    {
+                        model.p_and_q_full += " =\n= " + ar[i - 2] + "*" + dr[i - 1] + " - " + Math.Abs(dr[i - 2]) + "*(" + ar[i - 3] + " - " + br[i - 3] + "*" + Math.Abs(ddr[i - 3]) + ")";
+                        model.p_and_q_full += " =\n= " + ar[i - 2] + "*" + dr[i - 1] + " - " + Math.Abs(dr[i - 2]) + "*" + ar[i - 3] + " + " + br[i - 3] + "*" + (Math.Abs(ddr[i - 3]) * Math.Abs(dr[i - 2]));
+                        model.p_and_q_full += " =\n= " + (dr[i - 1] + (Math.Abs(ddr[i - 3]) * Math.Abs(dr[i - 2]))) + "*" + ar[i - 2] + " - " + Math.Abs(dr[i - 2]) + "*" + ar[i - 3];
+                    }
                 }
 
-                // Ä³çíàºìîñü â ÿêîìó ïîðÿäêó áóäå ïðàâèëüíî âèâåñòè ÷èñëà íà åêðàí
-                // Çàëåæèò â³ä òîãî ÿê êîðèñòóâà÷ ââ³â äàí³
+                // depending on input data
+                // choosig where is p and where is q
                 if (tf == true)
                 {
                     p = pr[1];
