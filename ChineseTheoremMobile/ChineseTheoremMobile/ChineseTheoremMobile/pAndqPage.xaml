@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChineseTheoremMobile.pAndqPage"
+             Title="q and p">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
+ 
+            <StackLayout VerticalOptions="FillAndExpand">
+
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label Text="Here you will get NSD, p and q" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,20"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Entry x:Name="entryA" WidthRequest="70" Placeholder=" a " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
+                        <Label Text="p + " FontSize="Large"/>
+                        <Entry x:Name="entryB" WidthRequest="70" Placeholder=" b " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center" TextChanged="Entry_TextChanged"/>
+                        <Label Text="q" FontSize="Large"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End">
+
+                <Button x:Name="btnDecide" Clicked="btnDecide_Clicked" Text="Decide" BackgroundColor="#7A85E8" FontSize="Medium"/>
+                <Label Text="Left 5 attempts" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,0,0,10"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

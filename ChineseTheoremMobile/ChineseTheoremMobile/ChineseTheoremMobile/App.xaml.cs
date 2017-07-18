@@ -13,7 +13,7 @@ namespace ChineseTheoremMobile
         {
             InitializeComponent();
 
-            MainPage = new ChineseTheoremMobile.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

@@ -14,6 +14,9 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\C
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.pdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.InstructionPage.xaml.g.cs
-F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.CalculatorPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.HistoryPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.PromoCodePage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.ChooseCalculatorPage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.ChinesePage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.OnlyNsdPage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.pAndqPage.xaml.g.cs

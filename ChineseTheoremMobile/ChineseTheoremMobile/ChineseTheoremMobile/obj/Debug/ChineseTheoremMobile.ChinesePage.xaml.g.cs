@@ -12,8 +12,8 @@ namespace ChineseTheoremMobile {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheorem\\ChineseTheoremMobile\\ChineseTheoremMobile\\Ch" +
-        "ineseTheoremMobile\\CalculatorPage.xaml")]
-    public partial class CalculatorPage : global::Xamarin.Forms.ContentPage {
+        "ineseTheoremMobile\\ChinesePage.xaml")]
+    public partial class ChinesePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button btnAddRow;
@@ -35,7 +35,7 @@ namespace ChineseTheoremMobile {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CalculatorPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ChinesePage));
             btnAddRow = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnAddRow");
             btnRemoveRow = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnRemoveRow");
             btnFillByRandom = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnFillByRandom");

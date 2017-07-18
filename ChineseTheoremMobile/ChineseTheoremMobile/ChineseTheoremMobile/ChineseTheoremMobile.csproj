@@ -38,8 +38,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CalculatorPage.xaml.cs">
-      <DependentUpon>CalculatorPage.xaml</DependentUpon>
+    <Compile Include="ChinesePage.xaml.cs">
+      <DependentUpon>ChinesePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseCalculatorPage.xaml.cs">
+      <DependentUpon>ChooseCalculatorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="expressionModel.cs" />
     <Compile Include="HistoryPage.xaml.cs">
@@ -52,6 +55,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="nsdCalculator.cs" />
+    <Compile Include="OnlyNsdPage.xaml.cs">
+      <DependentUpon>OnlyNsdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pAndqPage.xaml.cs">
+      <DependentUpon>pAndqPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PromoCodePage.xaml.cs">
       <DependentUpon>PromoCodePage.xaml</DependentUpon>
     </Compile>
@@ -91,7 +100,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CalculatorPage.xaml">
+    <EmbeddedResource Include="ChinesePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -104,6 +113,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PromoCodePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChooseCalculatorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OnlyNsdPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pAndqPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

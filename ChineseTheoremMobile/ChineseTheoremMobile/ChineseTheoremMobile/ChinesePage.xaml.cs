@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ChineseTheoremMobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CalculatorPage : ContentPage
+    public partial class ChinesePage : ContentPage
     {
-        public CalculatorPage()
+        public ChinesePage()
         {
             InitializeComponent();
         }
@@ -290,8 +290,12 @@ namespace ChineseTheoremMobile
                         while(true)
                         {
                             Start:
-                            int tmpRand = rnd.Next(50, 100);
+                            int tmpRand = rnd.Next(51, 100);
                             if(tmpRand <= tmp_b)
+                            {
+                                goto Start;
+                            }
+                            else if(tmpRand % tmp_b == 0)
                             {
                                 goto Start;
                             }

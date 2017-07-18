@@ -64,12 +64,13 @@ namespace ChineseTheoremMobile
                 model.q = q;
                 model.nsd = nsd;
                 model.nsd_full += ar[1] + " = " + br[1] + "*" + br[1] + " + 0";
+                model.p_and_q_full += "In this case expression does't exist";
                 return model;
 
                 //return nsd, p, q;
             }
 
-            // Â ³íøîìó âèïàäêó ðàõóºìî ÍÑÄ òà âèâîäèìî öå ÷èñëî
+            // in another case calculation nsd and showing that number
             else
             {
                 for (; cr[i - 1] != 0;)
@@ -86,7 +87,7 @@ namespace ChineseTheoremMobile
             }
 
 
-
+            //we will need it on next step to show how we decided expression
             int[] ddr = new int[50];
             for (int ii = 0; ii < 50; ii++)
             {
@@ -96,8 +97,8 @@ namespace ChineseTheoremMobile
 
 
 
-            // Ä³îôàíòîâå ð³âíÿííÿ
-            if (ar[1] % br[1] == 1) // ßêùî îñòà÷à ä³ëåííÿ îäíîãî ÷èñëà íà ³íøå = 1
+            // diofant expression
+            if (ar[1] % br[1] == 1) // if rest of dividing one number on anthter == 1
             {
                 if(tf == true)
                 {
@@ -114,7 +115,7 @@ namespace ChineseTheoremMobile
                 //tf == 0 ? q = 1 : q = (ar[1] / br[1]) / -1;
 
             }
-            else // Âèêîíóºìî çà ôîðìóëîþ ä³îôàíòîâîãî ð³âíÿííÿ
+            else // using formula for diofant expression
             {
                 pr[1] = 1;
                 pr[2] = dr[1];
@@ -161,6 +162,7 @@ namespace ChineseTheoremMobile
             model.p = p;
             model.q = q;
             model.nsd = nsd;
+            model.p_and_q_full += "In this case expression does't exist";
             return model;           
            
         }
