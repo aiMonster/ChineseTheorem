@@ -81,7 +81,7 @@ namespace ConsoleNsdWhole
                     //return nsd, p, q;
                 }
 
-                // Â ³íøîìó âèïàäêó ðàõóºìî ÍÑÄ òà âèâîäèìî öå ÷èñëî
+                // in another case calculation nsd and showing that number
                 else
                 {
                     for (; cr[i - 1] != 0;)

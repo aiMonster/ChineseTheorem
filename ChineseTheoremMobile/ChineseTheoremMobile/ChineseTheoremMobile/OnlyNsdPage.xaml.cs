@@ -29,6 +29,18 @@ namespace ChineseTheoremMobile
                 await DisplayAlert("Caution", "b - is not filled or = 0", "ОK");
                 return;
             }
+
+
+            PointsController p = PointsController.getInstance();
+           if(p.IntPoints >= 2)
+            {
+                p.IntPoints-=2;
+            }
+           else
+            {
+                await DisplayAlert("Caution", "Not enough points", "ОK");
+                return;
+            }
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)

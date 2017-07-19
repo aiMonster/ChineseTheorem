@@ -61,6 +61,7 @@
     <Compile Include="pAndqPage.xaml.cs">
       <DependentUpon>pAndqPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PointsController.cs" />
     <Compile Include="PromoCodePage.xaml.cs">
       <DependentUpon>PromoCodePage.xaml</DependentUpon>
     </Compile>

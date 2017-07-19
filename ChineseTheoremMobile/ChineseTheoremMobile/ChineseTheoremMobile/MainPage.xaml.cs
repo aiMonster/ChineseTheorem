@@ -12,6 +12,8 @@ namespace ChineseTheoremMobile
         public MainPage()
         {
             InitializeComponent();
+            PointsController p = PointsController.getInstance();            
+            BindingContext = p;
             //setLanguage(LanguageLibrary.Ukrainian());
         }
 

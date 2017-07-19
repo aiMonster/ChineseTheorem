@@ -23,7 +23,7 @@
             <StackLayout VerticalOptions="End">
 
                 <Button x:Name="btnDecide" Clicked="btnDecide_Clicked" Text="Decide" BackgroundColor="#7A85E8" FontSize="Medium"/>
-                <Label Text="Left 5 attempts" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,0,0,10"/>
+                <Label Text="{Binding Points}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,0,0,10"/>
 
             </StackLayout>
         </StackLayout>
