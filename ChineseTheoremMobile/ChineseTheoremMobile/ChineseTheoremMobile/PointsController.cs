@@ -35,6 +35,7 @@ namespace ChineseTheoremMobile
             set
             {
                 points = value;
+                //making changes to db with our amount of points
                 OnPropertyChanged("Points");
             }
         }

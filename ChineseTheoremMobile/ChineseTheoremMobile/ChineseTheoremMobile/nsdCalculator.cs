@@ -110,7 +110,7 @@ namespace ChineseTheoremMobile
                     p = (ar[1] / br[1]) / -1;
                     q = 1;
                 }
-
+                model.p_and_q_full += "In this case expression does't exist";
                 //tf == 1 ? p = 1 : p = (ar[1] / br[1]) / -1;
                 //tf == 0 ? q = 1 : q = (ar[1] / br[1]) / -1;
 
@@ -162,7 +162,7 @@ namespace ChineseTheoremMobile
             model.p = p;
             model.q = q;
             model.nsd = nsd;
-            model.p_and_q_full += "In this case expression does't exist";
+            
             return model;           
            
         }

@@ -14,12 +14,13 @@ namespace ChineseTheoremMobile
             InitializeComponent();
             PointsController p = PointsController.getInstance();            
             BindingContext = p;
-            //setLanguage(LanguageLibrary.Ukrainian());
+
+
+            //here we are setting and checking our amount or points
+            p.IntPoints = 25;
+            
         }
 
-        //public void setLanguage(LanguageModel model)
-        //{
-        //    BindingContext = new LanguageController(model);
-        //}
+        
     }
 }
