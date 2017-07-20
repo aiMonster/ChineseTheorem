@@ -166,5 +166,142 @@ namespace ChineseTheoremMobile
             return model;           
            
         }
+
+        public static ToDBModel CountWithM(int[] numbers_b, int[] numbers_p, int amount)
+        {
+            ToDBModel finalModel = new ToDBModel();
+            int P = 1;
+            int[] numbers_m = new int[amount+1];
+            int[] numbers_M = new int[amount + 1];
+
+            string tmpEmpression = "";
+            finalModel.expression += "P = ";
+            for(int i = 1; i <= amount; i++)
+            {
+                finalModel.condition += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
+                if(i < amount)
+                {
+                    finalModel.expression += "p" + i + "*";
+                    tmpEmpression += numbers_p[i] + "*";
+                }
+                else
+                {
+                    finalModel.expression += "p" + i + " = ";
+                    tmpEmpression += numbers_p[i] + " = ";
+                }
+                P *= numbers_p[i];
+            }
+            finalModel.expression += tmpEmpression + P + ";\n\n";
+
+            for(int i = 1; i <= amount; i++)
+            {
+                numbers_m[i] = P / numbers_p[i];
+                finalModel.expression += "m" + i + " = P/p" + i + " = " + P + "/" + numbers_p[i] + " = ";
+                for(int ii = 1; ii <= amount; ii++)
+                {
+                    if(ii != i)
+                    {
+                        finalModel.expression += numbers_p[ii] + "*";
+                    }
+                }
+                finalModel.expression = finalModel.expression.Remove(finalModel.expression.Length - 1);
+                finalModel.expression += " = " + numbers_m[i] + ";\n";
+
+            }
+            finalModel.expression += "\n";
+
+
+            for(int i = 1; i <= amount; i++)
+            {
+                finalModel.expression += "M" + i + " = m" + i + "^(-1) mod p" + i + " = " + numbers_m[i] + "^(-1) mod " + numbers_p[i] + ";\n";
+            }
+            finalModel.expression += "\n";
+
+            for(int i = 1; i <= amount; i++)
+            {
+                finalModel.expression += "M" + i + ":\n";
+
+                expressionModel eModel = new expressionModel();
+                eModel = nsdCalculator.Count(numbers_m[i], numbers_p[i]);
+
+                finalModel.expression += eModel.nsd_full + "\n";
+                finalModel.expression += eModel.p_and_q_full;
+                finalModel.expression += "\np = " + eModel.p + "  q = " + eModel.q + "\n\n";
+
+                if (eModel.q < 0)
+                {
+                    finalModel.expression += "(" + eModel.p + "*" + numbers_m[i] + " mod " + numbers_p[i] + " - " + Math.Abs(eModel.q) + "*" + numbers_p[i] + " mod " + numbers_p[i] + ") mod " + numbers_p[i] + " = 1 mod " + numbers_p[i] + "\n";
+                }
+                else
+                {
+                    finalModel.expression += "(" + eModel.q + "*" + numbers_p[i] + "mod " + numbers_p[i] + " - " + Math.Abs(eModel.p) + "*" + numbers_m[i] + "mod " + numbers_p[i] + ") mod " + numbers_p[i] + " = 1 mod " + numbers_p[i] + "\n";
+
+                }
+
+                finalModel.expression += eModel.p + "*" + numbers_m[i] + " mod " + numbers_p[i] + " = 1 mod " + numbers_p[i] + "     /" + numbers_m[i] + "\n";
+
+                int tmpP = eModel.p;
+                while(tmpP <= 0)
+                {
+                    finalModel.expression += tmpP + " mod " + numbers_p[i] + " = " + numbers_m[i] + "^(-1) mod " + numbers_p[i] + "\n";
+                    tmpP += numbers_p[i];
+                }
+                finalModel.expression += tmpP + " mod " + numbers_p[i] + " = " + numbers_m[i] + "^(-1) mod " + numbers_p[i] + "\n";
+                finalModel.expression += "M" + i + " = " + tmpP + "\n";
+                numbers_M[i] = tmpP;
+
+
+                finalModel.expression += "\n";
+            }
+
+            finalModel.expression += "X = (";
+
+            for(int i = 1; i <= amount; i++)
+            {
+                finalModel.expression += "(m" + i + "*b" + i + "*M" + i + ")";
+                if(i < amount)
+                {
+                    finalModel.expression += " + ";
+                }
+            }
+            finalModel.expression += ")mod P\n";
+
+            long X = 0;
+            finalModel.expression += "X = (";
+            for (int i = 1; i <= amount; i++)
+            {
+                X += numbers_m[i] * numbers_b[i] * numbers_M[i];
+                finalModel.expression += "(" + numbers_m[i] + " *" + numbers_b[i] + "*" + numbers_M[i] + ")";
+                if (i < amount)
+                {
+                    finalModel.expression += " + ";
+                }
+            }
+            finalModel.expression += ")mod " + P + " = \n = (";
+
+
+            for(int i = 1; i <= amount; i++)
+            {
+                finalModel.expression += numbers_m[i] * numbers_b[i] * numbers_M[i];
+                if (i < amount)
+                {
+                    finalModel.expression += " + ";
+                }
+            }                          
+                
+            finalModel.expression += ") mod " + P + " =\n = " + X + " mod " + P + "\n";
+            finalModel.expression += "X = " + X % P + "\n";
+            finalModel.date = DateTime.Now;
+
+            finalModel.status = true;
+            for(int i = 1; i <= amount; i++)
+            {
+                if (X % numbers_p[i] != numbers_b[i])
+                    finalModel.status = false;
+            }
+
+
+            return finalModel;
+        }
     }
 }

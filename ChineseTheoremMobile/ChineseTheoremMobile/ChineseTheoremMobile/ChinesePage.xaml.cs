@@ -129,6 +129,17 @@ namespace ChineseTheoremMobile
 
                 //counting expression and adding it to the history
 
+                ToDBModel dbModel =  nsdCalculator.CountWithM(numbers_b, numbers_p, amountElements);
+
+                string toShow = "";
+                toShow += dbModel.name + "\n";
+                toShow += dbModel.condition + "\n";
+                toShow += dbModel.expression + "\n";
+                toShow += dbModel.date + "\n";
+                toShow += dbModel.status + "\n";
+
+                await DisplayAlert("Caution", toShow, "ОK");
+
                 bool success = true;
 
                 if(success == true)
@@ -145,6 +156,10 @@ namespace ChineseTheoremMobile
                 //end checking on 'both primes'
 
                 ///////////////////////////////// END CHECKING //////////////////////////////////
+
+
+
+
 
                 //deciding and writing to data base
 
@@ -192,7 +207,7 @@ namespace ChineseTheoremMobile
                 counter++;
             }
 
-            if(counter >= 10)
+            if(counter >= 4)
             {
                 DisplayAlert("Caution", "Can't add anymore rows", "ОK");
                 return;
