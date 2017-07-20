@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChineseTheoremMobile.HistoryPage"
              Title="history">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Here we have our history" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <ListView x:Name="expressionsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding condition}" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>        
+    </StackLayout>
 </ContentPage>

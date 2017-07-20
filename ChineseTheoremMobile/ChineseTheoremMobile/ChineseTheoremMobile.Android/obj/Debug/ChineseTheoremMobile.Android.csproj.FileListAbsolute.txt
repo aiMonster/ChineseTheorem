@@ -48,3 +48,12 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\C
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLite-net.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLitePCLRaw.batteries_green.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLitePCLRaw.core.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLitePCLRaw.lib.e_sqlite3.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLite-net.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLite-net.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\SQLite-net.dll.mdb

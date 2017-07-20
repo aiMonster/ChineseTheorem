@@ -46,8 +46,13 @@ namespace ChineseTheoremMobile
                 return;
             }
 
+            PointsController p = PointsController.getInstance();
+            if (p.IntPoints < 4)
+            {
+                await DisplayAlert("Caution", "Not enough points", "ОK");
+                return;
+            }
 
-            
 
             ToDBModel dbModel = new ToDBModel();
             expressionModel eModel = new expressionModel();
@@ -71,12 +76,7 @@ namespace ChineseTheoremMobile
                 //return;
             }
 
-            PointsController p = PointsController.getInstance();
-            if (p.IntPoints < 4)
-            {
-                await DisplayAlert("Caution", "Not enough points", "ОK");
-                return;
-            }
+            
 
             bool result = DBSaver.Save(dbModel);
 

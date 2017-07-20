@@ -16,5 +16,21 @@ namespace ChineseTheoremMobile
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            expressionsList.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
+        }
+
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+            //Friend selectedFriend = (Friend)e.SelectedItem;
+            //FriendPage friendPage = new FriendPage();
+            //friendPage.BindingContext = selectedFriend;
+            //await Navigation.PushAsync(friendPage);
+            await DisplayAlert("Caution", "selected", "ОK");            
+        }
     }
 }

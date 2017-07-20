@@ -101,35 +101,33 @@ namespace ChineseTheoremMobile
             }
             //DisplayAlert("Caution", "Perfect", "ОK");
 
-            string result = "";
+            string condition = "";
             for (int i = 1; i <= amountElements; i++)
             {
-                result += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
+                condition += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
             }
 
-            bool answer = await DisplayAlert("Is expression correct?", result, "It's ok", "Cancel");
-            if(answer == true)
+            bool answer = await DisplayAlert("Is expression correct?", condition, "It's ok", "Cancel");
+            if(answer == false)
             {
-                //clearing old numbers
-                rowCounter = 1;
-                foreach (StackLayout row in slRowsToCalculate.Children)
-                {
-                    int innerCounter = 0;
-                    foreach (var num in row.Children)
-                    {
-                        if (innerCounter == 1 || innerCounter == 3)
-                        {
-                            Entry tmpE = num as Entry;
-                            tmpE.Text = "";                            
-                        }                        
-                        innerCounter++;
-                    }                   
-                    rowCounter++;
-                }
+                return;                
+             }
 
-                //counting expression and adding it to the history
+            PointsController p = PointsController.getInstance();
+            if (p.IntPoints < 15)
+            {
+                await DisplayAlert("Caution", "Not enough points", "ОK");
+                return;
+            }
 
-                ToDBModel dbModel =  nsdCalculator.CountWithM(numbers_b, numbers_p, amountElements);
+            //counting expression and adding it to the history
+
+            ToDBModel dbModel =  nsdCalculator.CountWithM(numbers_b, numbers_p, amountElements);
+
+                if(!dbModel.status)
+            {
+                await DisplayAlert("Caution", "Sorry, we could'n decide it right, write to developer with screenshoot of history", "ОK");
+            }
 
                 string toShow = "";
                 toShow += dbModel.name + "\n";
@@ -140,7 +138,7 @@ namespace ChineseTheoremMobile
 
                 await DisplayAlert("Caution", toShow, "ОK");
 
-                bool success = true;
+                bool success = DBSaver.Save(dbModel);
 
                 if(success == true)
                 {
@@ -148,21 +146,39 @@ namespace ChineseTheoremMobile
                 }
                 else
                 {
-                    await DisplayAlert("Notification", "There were some problems with your expression, write to developer to return money", "OK");
+                    await DisplayAlert("Notification", "Sorry happend something wrong with writing to db, try to reinstall application", "OK");
+                    return;
                 }
 
-                //here some code
+            //here some code
 
-                //end checking on 'both primes'
+            //end checking on 'both primes'
 
-                ///////////////////////////////// END CHECKING //////////////////////////////////
+            ///////////////////////////////// END CHECKING //////////////////////////////////
+
+            if (dbModel.status)
+            {
+                p.IntPoints -= 15;
+            }
 
 
 
-
-
-                //deciding and writing to data base
-
+            //deciding and writing to data base
+            //clearing old numbers
+            rowCounter = 1;
+            foreach (StackLayout row in slRowsToCalculate.Children)
+            {
+                int innerCounter = 0;
+                foreach (var num in row.Children)
+                {
+                    if (innerCounter == 1 || innerCounter == 3)
+                    {
+                        Entry tmpE = num as Entry;
+                        tmpE.Text = "";
+                    }
+                    innerCounter++;
+                }
+                rowCounter++;
 
 
             }
@@ -255,6 +271,7 @@ namespace ChineseTheoremMobile
 
         private void btnFillByRandom_Clicked(object sender, EventArgs e)
         {
+        
             int amountElements = 0;
             foreach (var x in slRowsToCalculate.Children)
             {
@@ -334,6 +351,7 @@ namespace ChineseTheoremMobile
                 }
                 rowCounter++;
             }
+           
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)

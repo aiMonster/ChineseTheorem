@@ -20,3 +20,8 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\C
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.ChinesePage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.OnlyNsdPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\obj\Debug\ChineseTheoremMobile.pAndqPage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLite-net.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLitePCLRaw.batteries_green.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLitePCLRaw.core.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLite-net.xml
