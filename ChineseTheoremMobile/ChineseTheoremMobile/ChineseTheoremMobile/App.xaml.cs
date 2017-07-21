@@ -9,6 +9,7 @@ namespace ChineseTheoremMobile
 {
     public partial class App : Application
     {
+        //public static string AppName { get { return "StoreAccountInfoApp"; } }
         public const string DATABASE_NAME = "expressions.db";
         public static ExpressionRepository database;
         public static ExpressionRepository Database

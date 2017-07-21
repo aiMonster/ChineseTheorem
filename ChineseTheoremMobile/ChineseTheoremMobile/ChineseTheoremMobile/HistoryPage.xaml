@@ -4,13 +4,16 @@
              x:Class="ChineseTheoremMobile.HistoryPage"
              Title="history">
     <StackLayout>
-        <ListView x:Name="expressionsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+        <ListView x:Name="expressionsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected" HasUnevenRows="True" SeparatorColor="Purple" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding condition}" FontSize="Medium" />
+                            <StackLayout HorizontalOptions="Center">
+                                <Label Text="{Binding name}" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Salmon"/>
+                                <Label Text="{Binding condition}" FontSize="Medium" HorizontalTextAlignment="Center" TextColor="Blue" />
+                                <Label Text="{Binding date}" FontSize="Small" HorizontalTextAlignment="Center" TextColor="Green"/>
+                                
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>

@@ -6,7 +6,7 @@
     <ContentPage.Content>
         
         <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
-            
+            <!--
             <StackLayout Orientation="Horizontal" Margin="0,10,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                     <Button x:Name="btnAddRow" Text="Add row" Clicked="btnAddRow_Clicked" BackgroundColor="#A9FFAC"/>
@@ -15,7 +15,7 @@
                     <Button x:Name="btnRemoveRow" Text="Remove row" Clicked="btnRemoveRow_Clicked"  BackgroundColor="#FF7172"/>
                 </StackLayout>
             </StackLayout>
-
+            -->
 
             <Button x:Name="btnFillByRandom" Clicked="btnFillByRandom_Clicked" Text="Fill by random" BackgroundColor="##FFB74D" Margin="0,5,0,0"/>
             <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>

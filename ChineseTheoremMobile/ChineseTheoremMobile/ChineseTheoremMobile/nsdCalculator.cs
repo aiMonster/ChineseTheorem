@@ -176,18 +176,21 @@ namespace ChineseTheoremMobile
 
             string tmpEmpression = "";
             finalModel.expression += "P = ";
+            finalModel.name = "Chinese";
             for(int i = 1; i <= amount; i++)
             {
-                finalModel.condition += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
+                
                 if(i < amount)
                 {
                     finalModel.expression += "p" + i + "*";
                     tmpEmpression += numbers_p[i] + "*";
+                    finalModel.condition += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
                 }
                 else
                 {
                     finalModel.expression += "p" + i + " = ";
                     tmpEmpression += numbers_p[i] + " = ";
+                    finalModel.condition += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i];
                 }
                 P *= numbers_p[i];
             }

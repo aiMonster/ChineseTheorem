@@ -57,3 +57,10 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\C
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLite-net.xml
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\SQLite-net.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\SQLite-net.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Xamarin.Android.Support.CustomTabs.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Xamarin.iOS.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Mono.Security.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Xamarin.iOS.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Xamarin.iOS.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Mono.Security.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\Xamarin.iOS.dll.mdb

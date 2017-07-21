@@ -37,6 +37,11 @@ namespace ChineseTheoremMobile
             }
         }
 
+        public int DeleteItem(int id)
+        {
+            return database.Delete<DBTableModel>(id);
+        }
+
 
     }
 }

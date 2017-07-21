@@ -38,7 +38,7 @@ namespace ChineseTheoremMobile
 
 
 
-            string condition = a + "p + " + b + "q";
+            string condition =  a + "p + " + b + "q";
             bool answer = await DisplayAlert("Is expression correct?", condition, "It's ok", "Cancel");
 
             if (!answer)
