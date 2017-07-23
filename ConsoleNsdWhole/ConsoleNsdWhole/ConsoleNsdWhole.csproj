@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="nsdModel.cs" />
+    <Compile Include="ChineseCalculator.cs" />
+    <Compile Include="ExpressionModel.cs" />
+    <Compile Include="NsdWithMModel.cs" />
+    <Compile Include="OnlyNsdModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

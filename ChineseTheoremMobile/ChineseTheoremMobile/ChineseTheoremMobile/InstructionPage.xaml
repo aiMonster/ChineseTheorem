@@ -8,6 +8,7 @@
         <StackLayout>
         
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Clicked="Button_Clicked"/>
                 <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center"/>
                 <Entry Placeholder=" b1 " FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
                 

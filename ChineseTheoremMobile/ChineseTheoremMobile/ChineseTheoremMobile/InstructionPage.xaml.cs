@@ -19,6 +19,12 @@ namespace ChineseTheoremMobile
             InitializeComponent();            
         }
 
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PromoCodePage());
+    
+        }
+
         //private void btnEnglish_Clicked(object sender, EventArgs e)
         //{
         //    btnUkrainian.IsEnabled = true;
