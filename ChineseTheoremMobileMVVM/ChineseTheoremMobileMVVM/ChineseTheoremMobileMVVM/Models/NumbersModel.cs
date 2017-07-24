@@ -8,7 +8,7 @@ namespace ChineseTheoremMobileMVVM.Models
 {
     public class NumbersModel
     {
-        public int number_a { get; set; }
-        public int number_b { get; set; }
+        public string number_a { get; set; }
+        public string number_b { get; set; }
     }
 }

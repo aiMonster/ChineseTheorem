@@ -1,11 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ChineseTheoremMobileMVVM.ViewModels;"
              x:Class="ChineseTheoremMobileMVVM.Views.DecideNsdPage"
              Title="nsd">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+        <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
+
+            <StackLayout VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label Text="Here you will get only NSD" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,20"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Entry x:Name="entryA" Text="{Binding Number_a}" Placeholder="a" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Label Text="   "/>
+                        <Entry  x:Name="entryB" Text="{Binding Number_b}" Placeholder="b" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End">
+                <Button x:Name="btnDecide" Text="Decide" BackgroundColor="#7A85E8" FontSize="Medium" Command="{Binding DecideCommand}"/>
+                <Label Text="{Binding Source={x:Static viewModels:PointsViewModel.getInstance}, Path=Points, StringFormat='Left {0} points'}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,0,0,10">
+             
+
+                </Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

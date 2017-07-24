@@ -4,11 +4,28 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using ChineseTheoremMobileMVVM.DatabaseController;
 
 namespace ChineseTheoremMobileMVVM
 {
     public partial class App : Application
     {
+        public const string DATABASE_NAME = "expressions.db";
+        public static ExpressionRepository database;
+        public static ExpressionRepository Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new ExpressionRepository(DATABASE_NAME);
+                }
+                return database;
+            }
+        }
+
+
+
         public App()
         {
             InitializeComponent();

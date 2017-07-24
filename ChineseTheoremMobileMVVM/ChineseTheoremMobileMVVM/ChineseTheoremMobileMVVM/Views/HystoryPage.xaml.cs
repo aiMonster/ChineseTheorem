@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ChineseTheoremMobileMVVM.Models;
 
 namespace ChineseTheoremMobileMVVM.Views
 {
@@ -15,6 +16,18 @@ namespace ChineseTheoremMobileMVVM.Views
         public HystoryPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            List<ExpressionModel> tmpMod = new List<ExpressionModel>(App.Database.GetItems());
+            List<ExpressionModel> Mod = new List<ExpressionModel>();
+            foreach (var a in tmpMod)
+            {
+                Mod.Insert(0, a);
+            }
+            expressionsList.ItemsSource = Mod;
+            base.OnAppearing();
         }
     }
 }
