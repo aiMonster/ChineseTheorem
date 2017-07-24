@@ -19,7 +19,6 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.Views.DecideChinesePage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.Views.DecideNsdPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.Views.DecidePandQPage.xaml.g.cs
-F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.csprojResolveAssemblyReference.cache
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\SQLite-net.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\SQLitePCLRaw.batteries_green.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\SQLitePCLRaw.batteries_v2.dll

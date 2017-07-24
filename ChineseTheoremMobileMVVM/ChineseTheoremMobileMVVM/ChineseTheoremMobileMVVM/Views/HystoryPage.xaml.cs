@@ -29,5 +29,36 @@ namespace ChineseTheoremMobileMVVM.Views
             expressionsList.ItemsSource = Mod;
             base.OnAppearing();
         }
+
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+
+            //Friend selectedFriend = (Friend)e.SelectedItem;
+            //FriendPage friendPage = new FriendPage();
+            //friendPage.BindingContext = selectedFriend;
+            //await Navigation.PushAsync(friendPage);
+
+
+
+            if (e.SelectedItem != null)
+            {
+                ExpressionModel model = (ExpressionModel)e.SelectedItem;
+                int id = model.Id;
+
+                string toShow = "";
+
+                toShow += model.status + "\n\n";
+
+
+                toShow += model.condition + "\n\n" + model.solution;
+
+                await DisplayAlert("Result:", toShow, "CLOSE");
+                //App.Database.SaveItem(mm);
+                ((ListView)sender).SelectedItem = null;
+                //App.Database.DeleteItem(id);
+            }
+
+        }
     }
 }

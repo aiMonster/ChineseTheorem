@@ -4,12 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using ChineseTheoremMobileMVVM.Models;
 using ChineseTheoremMobileMVVM.Calculator;
 using ChineseTheoremMobileMVVM.Converter;
 using System.Windows.Input;
 using Xamarin.Forms;
-//App.Current.MainPage.DisplayAlert("", "", "OK");
+
 namespace ChineseTheoremMobileMVVM.ViewModels
 {
     public class DecideNsdViewModel : INotifyPropertyChanged
@@ -34,8 +35,17 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 return;
             }
 
-            int a = Convert.ToInt32(numbersModel.number_a);
-            int b = Convert.ToInt32(numbersModel.number_b);
+            int a = 0, b = 0;
+            try
+            {
+                a = Convert.ToInt32(numbersModel.number_a);
+                b = Convert.ToInt32(numbersModel.number_b);
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Caution", "Too big numbers in condition", "OK");
+                return;
+            }
 
             string condition = "a = " + a + ", b = " + b;
             bool answer = await App.Current.MainPage.DisplayAlert("Is condition correct?", condition, "It's ok", "Cancel");

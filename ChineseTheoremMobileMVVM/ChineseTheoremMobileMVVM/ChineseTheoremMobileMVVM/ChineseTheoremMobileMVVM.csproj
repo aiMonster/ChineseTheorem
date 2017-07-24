@@ -47,6 +47,7 @@
     <Compile Include="Models\NumbersModel.cs" />
     <Compile Include="Models\OnlyNsdModel.cs" />
     <Compile Include="ViewModels\DecideNsdViewModel.cs" />
+    <Compile Include="ViewModels\DecidePandQViewModel.cs" />
     <Compile Include="ViewModels\PointsViewModel.cs" />
     <Compile Include="Views\DecideChinesePage.xaml.cs">
       <DependentUpon>DecideChinesePage.xaml</DependentUpon>
