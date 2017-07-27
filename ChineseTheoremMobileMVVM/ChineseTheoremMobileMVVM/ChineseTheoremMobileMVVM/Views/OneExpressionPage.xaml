@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChineseTheoremMobileMVVM.Views.OneExpressionPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Name}" />
+            <Button Text="CLOSE" Command="{Binding CloseCommand}"/>
+            <Button Text="DELTE" Command="{Binding DeleteCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

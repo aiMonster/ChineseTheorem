@@ -3,9 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChineseTheoremMobileMVVM.Views.DecideChinesePage"
              Title="chinese">
-    <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
-    </ContentPage.Content>
+            <ListView x:Name="dataList" ItemsSource="{Binding DataList}" IsEnabled="False" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                                <Label Text="X = "/>
+                                <Entry Placeholder="b" Text="{Binding number_a}" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center"/>
+                                <Label Text=" mod "/>
+                                <Entry Placeholder="p" Text="{Binding number_b}" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center"/>
+                            </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        <Button Text="Decide" Command="{Binding DecideCommand}"/>
+
+    </StackLayout>
+
 </ContentPage>
