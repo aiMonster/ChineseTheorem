@@ -11,14 +11,14 @@ namespace ChineseTheoremMobileMVVM
     public partial class App : Application
     {
         public const string DATABASE_NAME = "expressions.db";
-        public static ExpressionRepository database;
-        public static ExpressionRepository Database
+        public static ExpressionRepositoryAsync database;
+        public static ExpressionRepositoryAsync Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new ExpressionRepository(DATABASE_NAME);
+                    database = new ExpressionRepositoryAsync(DATABASE_NAME);
                 }
                 return database;
             }

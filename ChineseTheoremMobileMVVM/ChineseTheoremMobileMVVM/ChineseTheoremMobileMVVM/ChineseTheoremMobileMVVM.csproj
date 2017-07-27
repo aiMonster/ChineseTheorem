@@ -41,6 +41,7 @@
     <Compile Include="Calculator\ChineseCalculator.cs" />
     <Compile Include="Converter\ConverterToExpressionModel.cs" />
     <Compile Include="DatabaseController\ExpressionRepository.cs" />
+    <Compile Include="DatabaseController\ExpressionRepositoryAsync.cs" />
     <Compile Include="DatabaseController\ISQLite.cs" />
     <Compile Include="Models\ExpressionModel.cs" />
     <Compile Include="Models\NsdWithMModel.cs" />

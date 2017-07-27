@@ -33,9 +33,9 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             Navigation.PopModalAsync();
         }
 
-        private void Delete()
+        private async void Delete()
         {
-            App.Database.DeleteItem(exModel.Id);
+            await App.Database.DeleteItemAsync(exModel);
             Close();
 
         }
