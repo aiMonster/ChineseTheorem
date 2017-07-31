@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:ChineseTheoremMobileMVVM.ViewModels;"
+             xmlns:validation ="clr-namespace:ChineseTheoremMobileMVVM.Behaviors" 
              x:Class="ChineseTheoremMobileMVVM.Views.DecidePandQPage"
              Title="nsd, p and q">
     <ContentPage.Content>
@@ -13,9 +14,17 @@
                     <Label Text="Here you will get NSD, p and q" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,20"/>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Entry x:Name="entryA" Text="{Binding Number_a}" Placeholder="a" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry x:Name="entryA" Text="{Binding Number_a}" Placeholder="a" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center">
+                            <Entry.Behaviors>
+                                <validation:EntryBehavior></validation:EntryBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
                         <Label Text="p + " FontSize="Large"/>
-                        <Entry x:Name="entryB" Text="{Binding Number_b}" Placeholder="b" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center"/>
+                        <Entry x:Name="entryB" Text="{Binding Number_b}" Placeholder="b" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" BackgroundColor="LightBlue" VerticalOptions="Center">
+                            <Entry.Behaviors>
+                                <validation:EntryBehavior></validation:EntryBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
                         <Label Text="q" FontSize="Large"/>
                     </StackLayout>
                 </StackLayout>

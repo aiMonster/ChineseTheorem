@@ -219,8 +219,9 @@ namespace ChineseTheoremMobileMVVM.Calculator
         }
 
         //gets two arrays of data !!!!- start count from 1, not from 0 -!!!! and max array's size 5 elements
-        public static NsdWithMModel Count_Nsd_with_M(int[] numbers_b, int[] numbers_p, int amount)
+        public static NsdWithMModel Count_Nsd_with_M(int[] numbers_b, int[] numbers_p)
         {
+            int amount = numbers_b.Length - 1;
             NsdWithMModel finalModel = new NsdWithMModel();
             finalModel.amountOfElements = amount;
 

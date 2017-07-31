@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Behaviors\EntryBehavior.cs" />
     <Compile Include="Calculator\ChineseCalculator.cs" />
     <Compile Include="Converter\ConverterToExpressionModel.cs" />
     <Compile Include="DatabaseController\ExpressionRepository.cs" />

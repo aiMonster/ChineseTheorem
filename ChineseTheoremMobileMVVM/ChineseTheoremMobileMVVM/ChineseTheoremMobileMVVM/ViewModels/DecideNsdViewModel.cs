@@ -77,7 +77,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
 
             //saving to db
-            App.Database.SaveItem(toDbModel);
+            await App.Database.SaveItem(toDbModel);
 
             await App.Current.MainPage.DisplayAlert("Notification", "Expression added to History", "OK");
             Number_a = "";
@@ -109,7 +109,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if(numbersModel.number_a != value)
                 {
-                    numbersModel.number_a = value.Replace(".", "");                    
+                    numbersModel.number_a = value;                    
                     OnPropertyChanged("Number_a");
                 }
             }
@@ -122,7 +122,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if (numbersModel.number_b != value)
                 {
-                    numbersModel.number_b = value.Replace(".", "");
+                    numbersModel.number_b = value;
                     OnPropertyChanged("Number_b");
                 }
             }

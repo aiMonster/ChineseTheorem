@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:validation ="clr-namespace:ChineseTheoremMobileMVVM.Behaviors" 
              x:Class="ChineseTheoremMobileMVVM.Views.DecideChinesePage"
              Title="chinese">
 
@@ -12,9 +13,17 @@
                             <ViewCell.View>
                                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                                 <Label Text="X = "/>
-                                <Entry Placeholder="b" Text="{Binding number_a}" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center"/>
+                                <Entry Placeholder="b" Text="{Binding number_a}" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center">
+                                    <Entry.Behaviors>
+                                        <validation:EntryBehavior></validation:EntryBehavior>
+                                    </Entry.Behaviors>
+                                </Entry>
                                 <Label Text=" mod "/>
-                                <Entry Placeholder="p" Text="{Binding number_b}" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center"/>
+                                <Entry Placeholder="p" Text="{Binding number_b}" HorizontalTextAlignment="Center" WidthRequest="70" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center">
+                                    <Entry.Behaviors>
+                                        <validation:EntryBehavior></validation:EntryBehavior>
+                                    </Entry.Behaviors>
+                                </Entry>
                             </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

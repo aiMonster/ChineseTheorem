@@ -79,7 +79,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
 
             //saving to db
-            App.Database.SaveItem(toDbModel);
+            await App.Database.SaveItem(toDbModel);
 
             await App.Current.MainPage.DisplayAlert("Notification", "Expression added to History", "OK");
             Number_a = "";
