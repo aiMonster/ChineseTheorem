@@ -28,8 +28,10 @@ namespace ChineseTheoremMobileMVVM.Behaviors
 
         protected override void OnDetachingFrom(Entry bindable)
         {
-            base.OnDetachingFrom(bindable);
             bindable.TextChanged -= this.bindable_TextChanged;
+            base.OnDetachingFrom(bindable);            
         }
+
+        
     }
 }

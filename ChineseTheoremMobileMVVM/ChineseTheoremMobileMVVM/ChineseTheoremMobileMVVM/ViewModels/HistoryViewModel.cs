@@ -20,6 +20,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
    
         public HistoryViewModel()
         {
+            
             exModelList = new List<ExpressionModel>();             
         }        
 
@@ -33,8 +34,11 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if(exModelList != value)
                 {
+                   
                     exModelList = value;
                     OnPropertyChanged("ExModelList");
+                  
+                    
                 }
             }
         }            
@@ -42,23 +46,24 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         public async void OnAppearing(object sender, EventArgs e)
         {
-
+                        
             List<ExpressionModel> tmpList = new List<ExpressionModel>();
-            ExModelList.Clear();
+            //ExModelList.Clear();
+
             await App.Database.CreateTable();
             foreach (var a in await App.Database.GetItemsAsync())
             {
                 tmpList.Insert(0, a);
             }
 
-            ExModelList = tmpList;
+            ExModelList = tmpList;           
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
+               PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
     }
 }
