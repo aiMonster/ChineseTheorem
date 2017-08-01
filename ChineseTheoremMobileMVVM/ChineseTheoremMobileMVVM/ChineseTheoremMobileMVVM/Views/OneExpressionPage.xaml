@@ -3,10 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChineseTheoremMobileMVVM.Views.OneExpressionPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Name}" />
-            <Button Text="CLOSE" Command="{Binding CloseCommand}"/>
-            <Button Text="DELTE" Command="{Binding DeleteCommand}"/>
+        <StackLayout VerticalOptions="FillAndExpand">
+
+            <Label Text="{Binding Date}" TextColor="Green" VerticalOptions="Start" HorizontalOptions="Center"/>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="{Binding Name}" FontSize="Medium" TextColor="DarkBlue" HorizontalOptions="Center" />
+                    <Label Text="{Binding Condition}" FontSize="Medium" HorizontalOptions="Center" />
+                    <Label Text="{Binding Status}"  FontSize="Large" HorizontalOptions="Center" TextColor="BurlyWood"/>
+                    <Editor x:Name="editorSolution" Text="{Binding Solution}" TextColor="Black" FontSize="Small"/>
+                            
+                </StackLayout>
+            </ScrollView>
+            
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                    <Button Text="REMOVE" Command="{Binding DeleteCommand}" BackgroundColor="LightPink"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                    <Button Text="CLOSE" Command="{Binding CloseCommand}" BackgroundColor="BlanchedAlmond"/>
+                </StackLayout>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

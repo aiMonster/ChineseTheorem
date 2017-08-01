@@ -20,6 +20,7 @@ namespace ChineseTheoremMobileMVVM.Views
             OneExpressionViewModel viewmodel = new OneExpressionViewModel(model);
             viewmodel.Navigation = Navigation;
             BindingContext = viewmodel;
+            editorSolution.Focused += (sender, e) => { editorSolution.Unfocus(); };
         }
     }
 }

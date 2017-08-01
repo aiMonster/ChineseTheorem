@@ -66,7 +66,6 @@ namespace ChineseTheoremMobileMVVM.Converter
                 result.solution += ConverterToExpressionModel.Convert(origin.M_solution[i], false).solution + "\n\n";
                 result.solution += origin.M_end_solution[i] + "\nM" + i + "= " + origin.M[i] + "\n\n\n";
             }
-
             result.solution += origin.X_solution + "\n\nX = " + origin.X;
            
             return result;

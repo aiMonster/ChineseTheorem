@@ -35,6 +35,11 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private async void Delete()
         {
+            bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Do you really want to delete this entry?", "Yes", "No");
+            if(!answer)
+            {
+                return;
+            }
             await App.Database.DeleteItemAsync(exModel);
             Close();
 
@@ -49,6 +54,71 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 {
                     exModel.name = value;
                     OnPropertyChanged("Name");
+                }
+            }
+        }
+
+        public string Condition
+        {
+            get { return exModel.condition; }
+            set
+            {
+                if (exModel.condition != value)
+                {
+                    exModel.condition = value;
+                    OnPropertyChanged("Condition");
+                }
+            }
+        }
+
+        public string Solution
+        {
+            get { return exModel.solution; }
+            set
+            {
+                if (exModel.solution != value)
+                {
+                    exModel.solution = value;
+                    OnPropertyChanged("Solution");
+                }
+            }
+        }
+
+        public string SolutionP2
+        {
+            get { return exModel.solutionP2; }
+            set
+            {
+                if (exModel.solutionP2 != value)
+                {
+                    exModel.solutionP2 = value;
+                    OnPropertyChanged("SolutionP2");
+                }
+            }
+        }
+
+        public string Status
+        {
+            get { return exModel.status; }
+            set
+            {
+                if (exModel.status != value)
+                {
+                    exModel.status = value;
+                    OnPropertyChanged("Status");
+                }
+            }
+        }
+
+        public string Date
+        {
+            get { return Convert.ToString(exModel.date); }
+            set
+            {
+                if (Convert.ToString(exModel.date) != value)
+                {
+                    exModel.date = Convert.ToDateTime(value);
+                    OnPropertyChanged("Date");
                 }
             }
         }

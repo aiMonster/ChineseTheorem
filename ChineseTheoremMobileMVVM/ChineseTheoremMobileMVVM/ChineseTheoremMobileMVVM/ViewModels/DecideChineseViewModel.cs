@@ -166,7 +166,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
             
             ExpressionModel toDbModel = ConverterToExpressionModel.Convert(resultExpressionModel);
-
+            await App.Current.MainPage.DisplayAlert("", toDbModel.solution, "ok");
             if(resultExpressionModel.status)
             {
                 // expression decided correct
