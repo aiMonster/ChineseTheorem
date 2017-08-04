@@ -101,6 +101,8 @@ class MonoPackageManager_Resources {
 		"ChineseTheoremMobile.Android.dll",
 		"ChineseTheoremMobile.dll",
 		"FormsViewGroup.dll",
+		"Plugin.Connectivity.Abstractions.dll",
+		"Plugin.Connectivity.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",

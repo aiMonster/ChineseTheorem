@@ -25,3 +25,9 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\C
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLitePCLRaw.batteries_v2.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLitePCLRaw.core.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\SQLite-net.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\Plugin.Connectivity.Abstractions.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\Plugin.Connectivity.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\Plugin.Connectivity.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\Plugin.Connectivity.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile\bin\Debug\Plugin.Connectivity.Abstractions.xml

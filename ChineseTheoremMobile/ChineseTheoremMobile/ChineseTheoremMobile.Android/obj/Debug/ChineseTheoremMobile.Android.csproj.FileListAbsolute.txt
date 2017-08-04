@@ -64,3 +64,11 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\C
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Xamarin.iOS.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Mono.Security.pdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\Xamarin.iOS.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.Abstractions.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.Abstractions.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\bin\Debug\Plugin.Connectivity.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobile\ChineseTheoremMobile\ChineseTheoremMobile.Android\obj\Debug\android\assets\Plugin.Connectivity.dll.mdb

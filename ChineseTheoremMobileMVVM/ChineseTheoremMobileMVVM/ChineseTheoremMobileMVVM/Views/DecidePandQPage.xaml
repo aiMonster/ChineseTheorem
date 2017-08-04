@@ -6,7 +6,8 @@
              x:Class="ChineseTheoremMobileMVVM.Views.DecidePandQPage"
              Title="nsd, p and q">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
 
             <StackLayout VerticalOptions="FillAndExpand">
 
@@ -37,5 +38,6 @@
 
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -1,11 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:validation ="clr-namespace:ChineseTheoremMobileMVVM.Behaviors"
              x:Class="ChineseTheoremMobileMVVM.Views.PromoCodePage"
              Title="promo code">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+        <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label VerticalOptions="Start" Text="This page requires Internet Connection" TextColor="LightPink" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <BoxView Color="Aqua" HeightRequest="5" Margin="0,10"/>
+            
+            <StackLayout VerticalOptions="Center">
+                <Entry Placeholder="promoCode" Text="{Binding PromoCode}" WidthRequest="120" HorizontalOptions="Center" HorizontalTextAlignment="Center">
+                    <Entry.Behaviors>
+                        <validation:EntryBehavior></validation:EntryBehavior>
+                    </Entry.Behaviors>
+                </Entry>
+                <Button Text="ACTIVATE" WidthRequest="130" BackgroundColor="LightGreen" Command="{Binding ActivateCommand}" HorizontalOptions="Center" FontSize="Medium"/>
+            </StackLayout>
+
+            <BoxView Color="Aqua" HeightRequest="5" Margin="0,10"/>
+
+
+            <StackLayout VerticalOptions="End">
+                <Label Text="Transfer attempts to PromoCode:" FontSize="Medium" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry  WidthRequest="70" HorizontalTextAlignment="Center" FontSize="Medium" Text="{Binding Attempts}" VerticalOptions="Center" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <validation:EntryBehavior></validation:EntryBehavior>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label Text=" attempts" FontSize="Medium" VerticalOptions="Center"/>
+                </StackLayout>
+                <Button Text="TRANSFER" WidthRequest="130" Command="{Binding TransferCommand}" BackgroundColor="LightBlue" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding GotCode}"  FontSize="Large" HorizontalOptions="Center"/>
+            </StackLayout>
+            
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

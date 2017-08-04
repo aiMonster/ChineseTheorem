@@ -6,6 +6,7 @@
              x:Class="ChineseTheoremMobileMVVM.Views.DecideNsdPage"
              Title="nsd">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
 
             <StackLayout VerticalOptions="FillAndExpand">
@@ -36,5 +37,6 @@
                 </Label>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

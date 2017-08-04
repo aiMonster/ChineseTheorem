@@ -29,3 +29,9 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Mono.Android.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Mono.Android.pdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Mono.Android.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Plugin.Connectivity.Abstractions.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Plugin.Connectivity.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Plugin.Connectivity.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Plugin.Connectivity.xml
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Plugin.Connectivity.Abstractions.xml

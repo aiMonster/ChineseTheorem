@@ -5,43 +5,44 @@
              xmlns:validation ="clr-namespace:ChineseTheoremMobileMVVM.Behaviors" 
              x:Class="ChineseTheoremMobileMVVM.Views.DecideChinesePage"
              Title="chinese">
-    <StackLayout VerticalOptions="FillAndExpand">
-        <Button Text="Fill by random" Command="{Binding FillByRandomCommand}" BackgroundColor="##FFB74D" Margin="0,5,0,0"/>
-        <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+    
+        <StackLayout VerticalOptions="FillAndExpand">
         
-        <ListView x:Name="dataList" ItemsSource="{Binding DataList}" SeparatorVisibility="None" IsEnabled="False" HasUnevenRows="True">
+            <Button Text="Fill by random" Command="{Binding FillByRandomCommand}" BackgroundColor="##FFB74D" Margin="0,5,0,0"/>
+            <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+
+            <ListView x:Name="dataList" ItemsSource="{Binding DataList}" SeparatorVisibility="None" IsEnabled="False" VerticalOptions="Center" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="0,0,0,10">
-                                <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center" />
-                                <Entry Placeholder="b" Text="{Binding number_a}" HorizontalTextAlignment="Center" WidthRequest="70" BackgroundColor="LightBlue" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center">
-                                    <!--<Entry.Behaviors>
+                                    <Label Text="X ≡ " FontSize="Large" VerticalOptions="Center" />
+                                    <Entry Placeholder="b" Text="{Binding number_a}" HorizontalTextAlignment="Center" WidthRequest="70" BackgroundColor="LightBlue" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center">
+                                        <!--<Entry.Behaviors>
                                         <validation:EntryBehavior></validation:EntryBehavior>
                                     </Entry.Behaviors>-->
-                                </Entry>
-                                <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
-                                <Entry Placeholder="p" Text="{Binding number_b}" HorizontalTextAlignment="Center" WidthRequest="70" BackgroundColor="LightBlue" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center">
-                                    <!--<Entry.Behaviors>
+                                    </Entry>
+                                    <Label Text=" mod " FontSize="Large" VerticalOptions="Center"/>
+                                    <Entry Placeholder="p" Text="{Binding number_b}" HorizontalTextAlignment="Center" WidthRequest="70" BackgroundColor="LightBlue" FontSize="Large" Keyboard="Numeric" VerticalOptions="Center">
+                                        <!--<Entry.Behaviors>
                                         <validation:EntryBehavior></validation:EntryBehavior>
                                     </Entry.Behaviors>-->
-                                </Entry>
-                            </StackLayout>
+                                    </Entry>
+                                </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
-        <StackLayout VerticalOptions="End">
+ 
+        <StackLayout VerticalOptions="End" >
             <Button Text="Decide" BackgroundColor="#7A85E8" FontSize="Medium" Command="{Binding DecideCommand}"/>
             <Label Text="{Binding Source={x:Static viewModels:PointsViewModel.getInstance}, Path=Points, StringFormat='Left {0} points'}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,0,0,10">
 
-
             </Label>
         </StackLayout>
-
+   
+    
     </StackLayout>
-
 </ContentPage>

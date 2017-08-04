@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+
 namespace ChineseTheoremMobileMVVM.Droid
 {
     [Activity(Label = "ChineseTheoremMobileMVVM", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

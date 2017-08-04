@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
 
 namespace ChineseTheoremMobile
 {
@@ -21,6 +23,7 @@ namespace ChineseTheoremMobile
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            bool isConnected = CrossConnectivity.Current.IsConnected;
             await Navigation.PushModalAsync(new PromoCodePage());
     
         }
