@@ -65,3 +65,5 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\bin\Debug\Newtonsoft.Json.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\bin\Debug\Newtonsoft.Json.xml

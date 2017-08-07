@@ -49,6 +49,8 @@
     <Compile Include="Models\NsdWithMModel.cs" />
     <Compile Include="Models\NumbersModel.cs" />
     <Compile Include="Models\OnlyNsdModel.cs" />
+    <Compile Include="Models\PromoCodeModel.cs" />
+    <Compile Include="Services\PromoCodeService.cs" />
     <Compile Include="ViewModels\DecideChineseViewModel.cs" />
     <Compile Include="ViewModels\DecideNsdViewModel.cs" />
     <Compile Include="ViewModels\DecidePandQViewModel.cs" />
@@ -98,6 +100,10 @@
   <ItemGroup>
     <Reference Include="Mono.Android">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Plugin.Connectivity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\netstandard1.0\Plugin.Connectivity.dll</HintPath>

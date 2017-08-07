@@ -15,6 +15,7 @@ using ChineseTheoremMobileMVVM.Calculator;
 using ChineseTheoremMobileMVVM.Converter;
 using System.Windows.Input;
 using Xamarin.Forms;
+using ChineseTheoremMobileMVVM.Services;
 using ChineseTheoremMobileMVVM.Internet;
 
 using System.Net.NetworkInformation;
@@ -29,6 +30,10 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         private string promoCode { get; set; }
         private string attempts { get; set; }
         private string gotCode { get; set; }
+
+        //bool initialized = false;
+        //PromoCodeService promoCodeService = new PromoCodeService();
+        
 
         public PromoCodeViewModel()
         {
@@ -79,8 +84,15 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private void Activate()
         {
-            bool isConnected = CrossConnectivity.Current.IsConnected;           
-            App.Current.MainPage.DisplayAlert("activate",isConnected.ToString(), "ok");
+            bool isConnected = CrossConnectivity.Current.IsConnected;
+            //App.Current.MainPage.DisplayAlert("activate", isConnected.ToString(), "ok");
+            //if (initialized == true) return;
+
+            //IEnumerable<PromoCodeModel> codes = await promoCodeService.Get();
+
+
+
+
         }
 
         private async void Transfer()

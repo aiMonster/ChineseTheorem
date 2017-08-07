@@ -1,0 +1,4 @@
+Data Source=chinesetheoremserver.database.windows.net;Initial Catalog=ChineseTheoremDataBase;Integrated Security=False;User ID=ChineseTheoremAdmin;Password=********;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+
+Login - ChineseTheoremAdmin
+Password - Admin2017

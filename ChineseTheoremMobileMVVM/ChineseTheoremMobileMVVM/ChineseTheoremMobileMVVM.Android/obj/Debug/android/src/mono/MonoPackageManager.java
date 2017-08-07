@@ -101,6 +101,7 @@ class MonoPackageManager_Resources {
 		"ChineseTheoremMobileMVVM.Android.dll",
 		"ChineseTheoremMobileMVVM.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
 		"SQLite-net.dll",
