@@ -11,7 +11,7 @@ namespace ChineseTheoremMobileMVVM.Services
 {
     public class PromoCodeService
     {
-        const string Url = "http://localhost:52580/api/promocode/";
+        const string Url = "http://chinesetheoremwebapi.azurewebsites.net/api/promocode/";
 
         private HttpClient GetClient()
         {
@@ -20,11 +20,18 @@ namespace ChineseTheoremMobileMVVM.Services
             return client;
         }
 
-        public async Task<IEnumerable<PromoCodeModel>> Get()
+        public async Task<string> GetCode(int amount)
         {
             HttpClient client = GetClient();
-            string result = await client.GetStringAsync(Url);
-            return JsonConvert.DeserializeObject<IEnumerable<PromoCodeModel>>(result);              
+            string result = await client.GetStringAsync(Url + "/transferpromocode/" + amount + "/deimei");
+            return JsonConvert.DeserializeObject<string>(result);
+        }
+
+        public async Task<int> TransferCode(string promoCode)
+        {
+            HttpClient client = GetClient();
+            string result = await client.GetStringAsync(Url + "/activatepromocode/" + promoCode + "/deimei");
+            return JsonConvert.DeserializeObject<int>(result);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace TestForChineseAPI
 {
     class PromoCodeService
     {
-        const string Url = "http://localhost:52580/api/promocode/";
+        const string Url = "http://chinesetheoremwebapi.azurewebsites.net/api/promocode/";
 
         private HttpClient GetClient()
         {
@@ -26,11 +26,11 @@ namespace TestForChineseAPI
         //    return JsonConvert.DeserializeObject<IEnumerable<PromoCodeModel>>(result);
         //}
 
-        public async Task<PromoCodeModel> Get()
+        public async Task<string> GetCode(int amount)
         {
             HttpClient client = GetClient();
-            string result = await client.GetStringAsync(Url + "/" + 1);
-            return JsonConvert.DeserializeObject<PromoCodeModel>(result);
+            string result = await client.GetStringAsync(Url + "/transferpromocode/" + amount + "/deimei");
+            return JsonConvert.DeserializeObject<string>(result);
         }
     }
 }

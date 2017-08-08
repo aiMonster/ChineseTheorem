@@ -8,15 +8,16 @@
         <ScrollView>
         <StackLayout VerticalOptions="CenterAndExpand">
             <Label VerticalOptions="Start" Text="This page requires Internet Connection" TextColor="LightPink" FontSize="Large" HorizontalTextAlignment="Center"/>
-            <BoxView Color="Aqua" HeightRequest="5" Margin="0,10"/>
+                <ActivityIndicator IsRunning="True" IsVisible="{Binding IsBusy}"/>
+                <BoxView Color="Aqua" HeightRequest="5" Margin="0,10"/>
             
             <StackLayout VerticalOptions="Center">
-                <Entry Placeholder="promoCode" Text="{Binding PromoCode}" WidthRequest="120" HorizontalOptions="Center" HorizontalTextAlignment="Center">
+                    <Entry Placeholder="promoCode" Text="{Binding PromoCode}" IsEnabled="{Binding IsBusyInverted}" WidthRequest="120" HorizontalOptions="Center" HorizontalTextAlignment="Center">
                     <Entry.Behaviors>
                         <validation:EntryBehavior></validation:EntryBehavior>
                     </Entry.Behaviors>
                 </Entry>
-                <Button Text="ACTIVATE" WidthRequest="130" BackgroundColor="LightGreen" Command="{Binding ActivateCommand}" HorizontalOptions="Center" FontSize="Medium"/>
+                    <Button Text="ACTIVATE" WidthRequest="130" BackgroundColor="LightGreen" Command="{Binding ActivateCommand}" HorizontalOptions="Center" FontSize="Medium" IsEnabled="{Binding IsBusyInverted}"/>
             </StackLayout>
 
             <BoxView Color="Aqua" HeightRequest="5" Margin="0,10"/>
@@ -25,14 +26,14 @@
             <StackLayout VerticalOptions="End">
                 <Label Text="Transfer attempts to PromoCode:" FontSize="Medium" HorizontalOptions="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Entry  WidthRequest="70" HorizontalTextAlignment="Center" FontSize="Medium" Text="{Binding Attempts}" VerticalOptions="Center" Keyboard="Numeric">
+                        <Entry  WidthRequest="70" HorizontalTextAlignment="Center" IsEnabled="{Binding IsBusyInverted}" FontSize="Medium" Text="{Binding Attempts}" VerticalOptions="Center" Keyboard="Numeric">
                         <Entry.Behaviors>
                             <validation:EntryBehavior></validation:EntryBehavior>
                         </Entry.Behaviors>
                     </Entry>
                     <Label Text=" attempts" FontSize="Medium" VerticalOptions="Center"/>
                 </StackLayout>
-                <Button Text="TRANSFER" WidthRequest="130" Command="{Binding TransferCommand}" BackgroundColor="LightBlue" FontSize="Medium" HorizontalOptions="Center"/>
+                    <Button Text="TRANSFER" WidthRequest="130" Command="{Binding TransferCommand}" IsEnabled="{Binding IsBusyInverted}" BackgroundColor="LightBlue" FontSize="Medium" HorizontalOptions="Center"/>
                 <Label Text="{Binding GotCode}"  FontSize="Large" HorizontalOptions="Center"/>
             </StackLayout>
             

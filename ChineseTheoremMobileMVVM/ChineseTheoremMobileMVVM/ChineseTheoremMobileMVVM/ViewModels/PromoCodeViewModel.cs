@@ -30,15 +30,37 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         private string promoCode { get; set; }
         private string attempts { get; set; }
         private string gotCode { get; set; }
+        private bool isBusy { get; set; }
 
         //bool initialized = false;
-        //PromoCodeService promoCodeService = new PromoCodeService();
+        PromoCodeService promoCodeService = new PromoCodeService();
         
 
         public PromoCodeViewModel()
         {
             this.ActivateCommand = new Command(Activate);
             this.TransferCommand = new Command(Transfer);
+            IsBusy = false;
+        }
+
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set
+            {
+                if(isBusy != value)
+                {
+                    isBusy = value;
+                    OnPropertyChanged("IsBusy");
+                    OnPropertyChanged("IsBusyInverted");
+                }
+            }
+
+        }
+
+        public bool IsBusyInverted
+        {
+            get { return !isBusy; }
         }
 
         public string GotCode
@@ -82,17 +104,85 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         }
 
 
-        private void Activate()
+        private async void Activate()
         {
+            if(String.IsNullOrEmpty(promoCode))
+            {
+                await App.Current.MainPage.DisplayAlert("Caution", "Enter promo code!", "OK");
+                return;
+            }
+            else if(promoCode.Length != 8)
+            {
+                await App.Current.MainPage.DisplayAlert("Caution", "Promo code has to have length of 8 characters", "OK");
+                return;
+            }
+
+            char[] stuff = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+            'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'};
+            bool contains = false;
+            foreach(char tmp in promoCode)
+            {
+                bool tmpB = false;
+                foreach(char ch in stuff)
+                {
+                    if(tmp == ch)
+                    {
+                        tmpB = true;
+                        break;
+                    }
+                }
+
+                if(!tmpB)
+                {
+                    contains = true;
+                }
+                    
+            }
+            if(contains)
+            {
+                await App.Current.MainPage.DisplayAlert("Caution", "Invalid string!", "OK");
+                return;
+            }
+
+
+
+            bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Is promo code correct - " + promoCode + " ?", "YES", "NO");
+            if (!answer)
+            {
+                return;
+            }
+
             bool isConnected = CrossConnectivity.Current.IsConnected;
-            //App.Current.MainPage.DisplayAlert("activate", isConnected.ToString(), "ok");
-            //if (initialized == true) return;
+            if (!isConnected)
+            {
+                await App.Current.MainPage.DisplayAlert("Caution", "Sorry, no internet connection!", "OK");
+                return;
+            }
 
-            //IEnumerable<PromoCodeModel> codes = await promoCodeService.Get();
+            IsBusy = true;
+            int result = 0;
+            try
+            {
+                result = await promoCodeService.TransferCode(promoCode);
+            }
+            catch
+            {
+                IsBusy = false;
+                await App.Current.MainPage.DisplayAlert("Problem", "Something went wrong while connecting the server", "OK");                
+                return;
+            }
 
-
-
-
+            if(result <= 0)
+            {
+                IsBusy = false;
+                await App.Current.MainPage.DisplayAlert("Problem", "Promo code is Incorrect or already used, try again", "OK");                
+                return;
+            }
+            PointsViewModel.getInstance.Points += result;
+            PromoCode = "";            
+            IsBusy = false;
+            Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
+            await App.Current.MainPage.DisplayAlert("Activated", "You have added " + result + " attempts", "OK");                  
         }
 
         private async void Transfer()
@@ -120,15 +210,31 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
 
             //checking on internet connection
+            bool isConnected = CrossConnectivity.Current.IsConnected;
+            if(!isConnected)
+            {
+                await App.Current.MainPage.DisplayAlert("Caution", "Sorry, no internet connection!", "OK");
+                return;
+            }
 
-
-            //if Ok
-            //getting code
-
-            //await App.Current.MainPage.DisplayAlert("Caution", "Wait on code!", "OK");
+            IsBusy = true;
+            string result = "";
+            try
+            {
+                result = await promoCodeService.GetCode(Convert.ToInt32(attempts));
+            }
+            catch
+            {
+                IsBusy = false;
+                await App.Current.MainPage.DisplayAlert("Problem", "Something went wrong while connecting the server", "OK");                
+                return;
+            }
+                     
             PointsViewModel.getInstance.Points -= Convert.ToInt32(attempts);
-            Attempts = "";
-            GotCode = "1kd8df9s";
+            Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
+            GotCode = result;
+            IsBusy = false;
+            await App.Current.MainPage.DisplayAlert("Your code:", result, "OK");
         }
 
         public void onAppearing()

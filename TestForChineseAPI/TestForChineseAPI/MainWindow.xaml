@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestForChineseAPI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="250" Width="225">
     <Grid>
-        <Button Click="Button_Click" Content="button"/>
+        <StackPanel HorizontalAlignment="Center" Width="150" VerticalAlignment="Center">           
+       
+            <TextBox Name="tbActivate"/>
+            <Button Click="Button_Click" Content="ACTIVATE" Background="LightGreen"/>
+            <Separator Margin="0,20" Background="Black" BorderThickness="5"/>
+            <TextBox Name="tbTransfer"/>
+            <Button Name="btnTransfer" Click="btnTransfer_Click" Content="TRANSFER" Background="Aqua"/>
+        </StackPanel>
     </Grid>
 </Window>
