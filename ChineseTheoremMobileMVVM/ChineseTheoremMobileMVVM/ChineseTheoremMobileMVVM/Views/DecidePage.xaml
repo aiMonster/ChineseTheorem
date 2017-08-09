@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ChineseTheoremMobileMVVM.Views"
              x:Class="ChineseTheoremMobileMVVM.Views.DecidePage"
-             Title="decide">
+             Title="decide"
+             BarBackgroundColor="#9575CD">
     <TabbedPage.Children>
         <local:DecideChinesePage/>
         <local:DecidePandQPage/>

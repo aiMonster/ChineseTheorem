@@ -146,7 +146,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
 
 
-            bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Is promo code correct - " + promoCode + " ?", "YES", "NO");
+            bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Is promo code correct?\n'" + promoCode + "'", "YES", "NO");
             if (!answer)
             {
                 return;

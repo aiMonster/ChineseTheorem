@@ -10,7 +10,6 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Debug\Xamarin.Forms.Xaml.xml
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.Views.MainPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.App.xaml.g.cs
-F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.Views.ManualPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.pdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Debug\ChineseTheoremMobileMVVM.Views.DecidePage.xaml.g.cs
