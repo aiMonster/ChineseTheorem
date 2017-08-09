@@ -17,12 +17,26 @@ namespace ChineseTheoremMobileMVVM.ViewModels
     class HistoryViewModel : INotifyPropertyChanged
     {              
         List<ExpressionModel> exModelList { get; set; }
+        private bool isEmpty { get; set; }
    
         public HistoryViewModel()
         {
             
             exModelList = new List<ExpressionModel>();             
         }        
+
+        public bool IsEmpty
+        {
+            get { return isEmpty; }
+            set
+            {
+                if(isEmpty != value)
+                {
+                    isEmpty = value;
+                    OnPropertyChanged("IsEmpty");
+                }
+            }
+        }
 
         public List<ExpressionModel> ExModelList
         {
@@ -56,7 +70,16 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 tmpList.Insert(0, a);
             }
 
-            ExModelList = tmpList;           
+            if (tmpList.Count == 0)
+            {
+                IsEmpty = true;
+            }
+            else
+            {
+                IsEmpty = false;
+            }
+            ExModelList = tmpList;   
+                 
         }
         
         public event PropertyChangedEventHandler PropertyChanged;

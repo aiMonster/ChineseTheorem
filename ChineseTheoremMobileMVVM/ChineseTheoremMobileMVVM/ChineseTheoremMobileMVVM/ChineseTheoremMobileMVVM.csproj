@@ -50,6 +50,7 @@
     <Compile Include="Models\NumbersModel.cs" />
     <Compile Include="Models\OnlyNsdModel.cs" />
     <Compile Include="Models\PromoCodeModel.cs" />
+    <Compile Include="Services\IImeiGetter.cs" />
     <Compile Include="Services\PromoCodeService.cs" />
     <Compile Include="ViewModels\DecideChineseViewModel.cs" />
     <Compile Include="ViewModels\DecideNsdViewModel.cs" />

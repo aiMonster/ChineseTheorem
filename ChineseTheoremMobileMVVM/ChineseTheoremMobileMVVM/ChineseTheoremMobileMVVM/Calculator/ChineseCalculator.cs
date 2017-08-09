@@ -110,13 +110,13 @@ namespace ChineseTheoremMobileMVVM.Calculator
                     dr[i] = ar[i] / br[i] / -1; // Just for next step
                     ar[i + 1] = br[i];
                     br[i + 1] = cr[i];
-                    model.nsd_solution += ar[i] + " = " + br[i] + "*" + Math.Abs(dr[i]) + " + " + cr[i];
+                    model.nsd_solution += ar[i] + " = " + br[i] + "*" + Math.Abs(dr[i]) + " + " + cr[i] + "\n";
 
                     //in last row we should'n put NewLine
-                    if (cr[i - 1] > 1)
-                    {
-                        model.nsd_solution += "\n";
-                    }
+                    //if (cr[i - 1] > 1)
+                    //{
+                    //    model.nsd_solution += "\n";
+                    //}
 
                     i++;
                 }

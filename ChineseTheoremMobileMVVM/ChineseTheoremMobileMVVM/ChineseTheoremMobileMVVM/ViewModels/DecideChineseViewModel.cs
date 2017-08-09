@@ -33,6 +33,16 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private void FillByRandom()
         {
+            foreach (NumbersModel nM in dataList)
+            {
+                if (!String.IsNullOrEmpty(nM.number_a) || !String.IsNullOrEmpty(nM.number_b))
+                {
+                    App.Current.MainPage.DisplayAlert("Caution", "Before filling by random clear all cells!", "OK");
+                    return;
+                }
+            }
+
+
             //our numbers
             int[] numbers_p = new int[dataList.Count + 1];
             int[] numbers_b = new int[dataList.Count + 1];

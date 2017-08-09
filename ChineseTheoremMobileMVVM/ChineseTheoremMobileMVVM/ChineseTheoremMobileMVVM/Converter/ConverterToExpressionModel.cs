@@ -22,13 +22,13 @@ namespace ChineseTheoremMobileMVVM.Converter
             {
                 result.condition = "a = " + origin.a + ", b = " + origin.b;
                 result.name = "Only NSD";
-                result.solution += origin.nsd_solution + "\n\n" + "NSD = " + origin.nsd;
+                result.solution += origin.nsd_solution + "NSD = " + origin.nsd;
             }
             else
             {
                 result.condition = origin.a + "p + " + origin.b + "q";
                 result.name = "NSD, p and q";
-                result.solution += origin.nsd_solution + "\n\n" + "NSD = " + origin.nsd + "\n\n\n" + origin.p_and_q_solution + "\n\n";
+                result.solution += origin.nsd_solution + "NSD = " + origin.nsd + "\n\n\n" + origin.p_and_q_solution + "\n\n";
                 result.solution += "p = " + origin.p + ", q = " + origin.q;
 
             }         

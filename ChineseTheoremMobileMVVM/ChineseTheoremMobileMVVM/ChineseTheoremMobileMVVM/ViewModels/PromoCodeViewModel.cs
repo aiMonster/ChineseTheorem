@@ -163,7 +163,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             int result = 0;
             try
             {
-                result = await promoCodeService.TransferCode(promoCode);
+                result = await promoCodeService.ActivateCode(promoCode);
             }
             catch
             {
@@ -187,7 +187,11 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private async void Transfer()
         {
-            if(String.IsNullOrEmpty(attempts))
+            //string imei = DependencyService.Get<IImeiGetter>().GetImei();
+            //await App.Current.MainPage.DisplayAlert("Our imei", imei, "ok");
+
+
+            if (String.IsNullOrEmpty(attempts))
             {
                 await App.Current.MainPage.DisplayAlert("Caution", "Enter number!", "OK");
                 return;
@@ -221,7 +225,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             string result = "";
             try
             {
-                result = await promoCodeService.GetCode(Convert.ToInt32(attempts));
+                result = await promoCodeService.TransferCode(Convert.ToInt32(attempts));
             }
             catch
             {

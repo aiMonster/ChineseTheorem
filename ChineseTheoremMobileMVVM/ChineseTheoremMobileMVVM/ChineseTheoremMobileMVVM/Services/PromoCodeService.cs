@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ChineseTheoremMobileMVVM.Models;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace ChineseTheoremMobileMVVM.Services
 {
@@ -20,14 +21,16 @@ namespace ChineseTheoremMobileMVVM.Services
             return client;
         }
 
-        public async Task<string> GetCode(int amount)
+        public async Task<string> TransferCode(int amount)
         {
             HttpClient client = GetClient();
+            //string imei = DependencyService.Get<IImeiGetter>().GetImei();
+            //await App.Current.MainPage.DisplayAlert("Our imei", imei, "ok");
             string result = await client.GetStringAsync(Url + "/transferpromocode/" + amount + "/deimei");
             return JsonConvert.DeserializeObject<string>(result);
         }
 
-        public async Task<int> TransferCode(string promoCode)
+        public async Task<int> ActivateCode(string promoCode)
         {
             HttpClient client = GetClient();
             string result = await client.GetStringAsync(Url + "/activatepromocode/" + promoCode + "/deimei");

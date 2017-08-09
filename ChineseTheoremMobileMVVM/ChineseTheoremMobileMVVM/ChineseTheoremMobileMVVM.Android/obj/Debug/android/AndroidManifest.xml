@@ -4,11 +4,12 @@
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <application android:label="ChineseTheoremMobileMVVM.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="ChineseTheoremMobileMVVM" android:theme="@style/MainTheme" android:name="md596cb0efe05ad7ebb0fd9053a9f659484.MainActivity">
+  <application android:label="Chinese Theorem" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="Chinese Theorem" android:theme="@style/MainTheme" android:name="md596cb0efe05ad7ebb0fd9053a9f659484.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

@@ -4,7 +4,8 @@
              x:Class="ChineseTheoremMobileMVVM.Views.HystoryPage"
              Title="history"
              >
-    <StackLayout>        
+    <StackLayout>
+        <Label Text="History is empty" FontSize="Large" Margin="10, 50" TextColor="Coral" HorizontalTextAlignment="Center" IsVisible="{Binding IsEmpty}"/>
         <ListView x:Name="expressionsList" ItemsSource="{Binding ExModelList}" ItemSelected="OnItemSelected" HasUnevenRows="True" SeparatorColor="Purple" >
             <ListView.ItemTemplate>
                 <DataTemplate>
