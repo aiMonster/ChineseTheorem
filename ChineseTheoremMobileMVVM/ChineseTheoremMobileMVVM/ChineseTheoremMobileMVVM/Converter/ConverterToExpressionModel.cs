@@ -8,11 +8,12 @@ using ChineseTheoremMobileMVVM.Models;
 
 namespace ChineseTheoremMobileMVVM.Converter
 {
+    //class that represents data in comfortable way for user
+    //can have an input as OnlyNsdModel or NsdWithMModel
     public static class ConverterToExpressionModel
     {
         public static ExpressionModel Convert(OnlyNsdModel origin, bool isItOnlyNsd)
         {
-
             ExpressionModel result = new ExpressionModel();            
             
             result.status = (origin.final_status) ? "Expression made OK" : "Expression FAILED";

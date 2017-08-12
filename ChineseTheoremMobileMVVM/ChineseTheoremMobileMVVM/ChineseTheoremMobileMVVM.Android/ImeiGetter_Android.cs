@@ -21,15 +21,11 @@ namespace ChineseTheoremMobileMVVM.Droid
 {
     public class ImeiGetter_Android :IImeiGetter
     {
+        //we will add imei in MainActivity
         public ImeiGetter_Android() { }
         public static string imei { get; set; }
         public string GetImei()
-        {
-            //Android.Telephony.TelephonyManager mTelephonyMgr;
-            ////mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService);
-            //mTelephonyMgr =  (TelephonyManager)Forms.Context.GetSystemService(Android.Content.Context.TelephonyService);
-            //string tmp = mTelephonyMgr.DeviceId;
-           
+        {          
             return imei;
         }
     }

@@ -15,7 +15,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 {
     public class DecideChineseViewModel : INotifyPropertyChanged
     {
-        static int amount = 3; //means that we will have 3 elements
+        static int amount = 3; //means that we will have 3 rows/elements
         List<NumbersModel> dataList { get; set; }
         public ICommand DecideCommand { get; protected set; }
         public ICommand FillByRandomCommand { get; protected set; }
@@ -24,6 +24,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         {
             this.DecideCommand = new Command(Decide);
             this.FillByRandomCommand = new Command(FillByRandom);
+            //adding rows to our list
             dataList = new List<NumbersModel>();
             for(int i = 1; i <= amount; i++)
             {
@@ -33,11 +34,12 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private void FillByRandom()
         {
+            //we need it to avoid app stopping while ofen pressing this button
             foreach (NumbersModel nM in dataList)
             {
                 if (!String.IsNullOrEmpty(nM.number_a) || !String.IsNullOrEmpty(nM.number_b))
                 {
-                    App.Current.MainPage.DisplayAlert("Caution", "Before filling by random clear all cells!", "OK");
+                    App.Current.MainPage.DisplayAlert("Oops!", "Before filling by random clear all cells!", "OK");
                     return;
                 }
             }
@@ -133,13 +135,13 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
             catch
             {
-                await App.Current.MainPage.DisplayAlert("Caution", "Too big numbers in condition", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Too big numbers in condition!", "OK");
                 return;
             }
             
 
 
-            //checking on is correct numbers filled correct
+            //checking on is correct numbers filled by all rules
             if(!isCorrect(numbers_b, numbers_p))
             {
                 return;
@@ -160,7 +162,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             //if not enough points - exit
             if (PointsViewModel.getInstance.Points < 15)
             {
-                await App.Current.MainPage.DisplayAlert("Caution", "Not enough points!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points, price of that exercise 15!", "OK");
                 return;
             }
 
@@ -171,12 +173,11 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
             catch(System.OverflowException)
             {
-                await App.Current.MainPage.DisplayAlert("Caution", "You choosed to big numbers, and we can't count it correct!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "You choosed to big numbers, and we can't count it correct!", "OK");
                 return;
             }
             
-            ExpressionModel toDbModel = ConverterToExpressionModel.Convert(resultExpressionModel);
-            //await App.Current.MainPage.DisplayAlert("", toDbModel.solution, "ok");
+            ExpressionModel toDbModel = ConverterToExpressionModel.Convert(resultExpressionModel);           
             if(resultExpressionModel.status)
             {
                 // expression decided correct
@@ -185,14 +186,23 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             else
             {
                 //sorry something wrong
-                await App.Current.MainPage.DisplayAlert("Something wrong", "We couldn't decide expression correct, so we did'n minus points, write to developer", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't decide expression correct, so we did'n minus points, write to developer  with screenshot of that exercise", "OK");
             }
 
             //saving to db
-            await App.Database.SaveItem(toDbModel);
+            try
+            {
+                await App.Database.SaveItem(toDbModel);
+            }
+            catch
+            {
+                //and returning points
+                await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't save expression to dataBase, write to developer", "OK");
+                PointsViewModel.getInstance.Points += 15;
+            }
+            
 
-            await App.Current.MainPage.DisplayAlert("Notification", "Expression added to History", "OK");
-
+            await App.Current.MainPage.DisplayAlert("Excellent!", "Expression added to History", "OK");
             //clearing fields
             ClearEntries();            
 
@@ -215,7 +225,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if (String.IsNullOrEmpty(nM.number_a) || String.IsNullOrEmpty(nM.number_b))
                 {
-                    App.Current.MainPage.DisplayAlert("Caution", "You did'n fill all cells!", "OK");
+                    App.Current.MainPage.DisplayAlert("Oops!", "You did'n fill all cells!", "OK");
                     return false;
                 }
             }
@@ -224,7 +234,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if (nM.number_a == "0" || nM.number_b == "0")
                 {
-                    App.Current.MainPage.DisplayAlert("Caution", "One of numbers is equal zero!", "OK");
+                    App.Current.MainPage.DisplayAlert("Oops!", "One of numbers is equal zero!", "OK");
                     return false;
                 }
             }
@@ -233,7 +243,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if (nM.number_a.Contains(".") || nM.number_b.Contains("."))
                 {
-                    App.Current.MainPage.DisplayAlert("Caution", "Remove all dots!", "OK");
+                    App.Current.MainPage.DisplayAlert("Oops!", "Remove all dots!", "OK");
                     return false;
                 }
             }
@@ -248,7 +258,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if(numbers_b[i] >= numbers_p[i])
                 {
-                    App.Current.MainPage.DisplayAlert("Caution", "b >= p in" + i + " row - is not allowed!", "ОK");
+                    App.Current.MainPage.DisplayAlert("Oops!", "b >= p in" + i + " row - it is not allowed!", "ОK");
                     return false;
                 }
             }
@@ -262,7 +272,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                     OnlyNsdModel model = ChineseCalculator.Count_Nsd_p_q(numbers_p[i], numbers_p[y]);
                     if (model.nsd > 1)
                     {
-                        App.Current.MainPage.DisplayAlert("Caution", "Numbers 'p' in " + i + " and " + y + " rows are 'Both primes'!", "ОK");
+                        App.Current.MainPage.DisplayAlert("Oops!", "Numbers 'p' in " + i + " and " + y + " rows are 'Both primes'!", "ОK");
                         return false;
                     }
                 }

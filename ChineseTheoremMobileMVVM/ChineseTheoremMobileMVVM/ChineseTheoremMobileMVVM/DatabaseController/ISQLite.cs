@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChineseTheoremMobileMVVM.DatabaseController
 {
+    //interface for dependency
     public interface ISQLite
     {
         string GetDatabasePath(string filename);

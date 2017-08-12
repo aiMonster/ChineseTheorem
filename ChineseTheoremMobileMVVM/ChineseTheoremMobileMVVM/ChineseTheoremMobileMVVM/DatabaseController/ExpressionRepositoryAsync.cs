@@ -9,24 +9,21 @@ using ChineseTheoremMobileMVVM.Models;
 
 namespace ChineseTheoremMobileMVVM.DatabaseController
 {
+    //controller for out dataBase
     public class ExpressionRepositoryAsync
     {
-
         SQLiteAsyncConnection database;
         public ExpressionRepositoryAsync(string filename)
         {
             string databasePath = DependencyService.Get<ISQLite>().GetDatabasePath(filename);
             database = new SQLiteAsyncConnection(databasePath);
-            //database.CreateTable<ExpressionModel>();
         }
 
         public async Task CreateTable()
         {
             await database.CreateTableAsync<ExpressionModel>();
         }
-
-
-
+        
         public async Task <List<ExpressionModel>> GetItemsAsync()
         {
             return await database.Table<ExpressionModel>().ToListAsync();

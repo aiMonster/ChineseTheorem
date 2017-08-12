@@ -18,8 +18,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
     {
         //ICommand
         public ICommand DecideCommand { protected set; get; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        
         public NumbersModel numbersModel { get; private set; }
 
         public DecidePandQViewModel()
@@ -44,7 +43,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
             catch
             {
-                await App.Current.MainPage.DisplayAlert("Caution", "Too big numbers in condition", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Too big numbers in condition!", "OK");
                 return;
             }
             
@@ -59,7 +58,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             //if not enough points - exit
             if (PointsViewModel.getInstance.Points < 4)
             {
-                await App.Current.MainPage.DisplayAlert("Caution", "Not enough points!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points, price of that exercise 4!", "OK");
                 return;
             }
 
@@ -75,13 +74,23 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             else
             {
                 //sorry something wrong
-                await App.Current.MainPage.DisplayAlert("Something wrong", "We couldn't decide expression correct, so we did'n minus points, write to developer", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't decide expression correct, so we did'n minus points, write to developer  with screenshot of that exercise", "OK");
             }
 
             //saving to db
-            await App.Database.SaveItem(toDbModel);
+            try
+            {
+                await App.Database.SaveItem(toDbModel);
+            }
+            catch
+            {
+                //and returning points
+                await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't save expression to dataBase, write to developer", "OK");
+                PointsViewModel.getInstance.Points += 4;
+            }
+            
 
-            await App.Current.MainPage.DisplayAlert("Notification", "Expression added to History", "OK");
+            await App.Current.MainPage.DisplayAlert("Excellent!", "Expression added to History", "OK");
             Number_a = "";
             Number_b = "";
 
@@ -91,12 +100,12 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         {
             if (String.IsNullOrEmpty(Number_a) || String.IsNullOrEmpty(Number_b))
             {
-                App.Current.MainPage.DisplayAlert("Caution", "You did'n fill all cells", "OK");
+                App.Current.MainPage.DisplayAlert("Oops!", "You did'n fill all cells!", "OK");
                 return false;
             }
             else if (Number_a == "0" || Number_b == "0")
             {
-                App.Current.MainPage.DisplayAlert("Caution", "One of numbers is equal zero", "OK");
+                App.Current.MainPage.DisplayAlert("Oops!", "One of numbers is equal zero!", "OK");
                 return false;
             }
 
@@ -130,6 +139,8 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
         }
 
+
+        public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)

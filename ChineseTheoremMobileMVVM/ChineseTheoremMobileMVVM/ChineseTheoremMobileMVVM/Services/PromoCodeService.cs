@@ -10,6 +10,7 @@ using Xamarin.Forms;
 
 namespace ChineseTheoremMobileMVVM.Services
 {
+    //code where we send requests to our API
     public class PromoCodeService
     {
         const string Url = "http://chinesetheoremwebapi.azurewebsites.net/api/promocode/";
@@ -21,6 +22,7 @@ namespace ChineseTheoremMobileMVVM.Services
             return client;
         }
 
+        //takes amount of points we want to transfer into promoCode
         public async Task<string> TransferCode(int amount)
         {
             HttpClient client = GetClient();
@@ -29,6 +31,7 @@ namespace ChineseTheoremMobileMVVM.Services
             return JsonConvert.DeserializeObject<string>(result);
         }
 
+        //takes promoCode we want to activate
         public async Task<int> ActivateCode(string promoCode)
         {
             HttpClient client = GetClient();

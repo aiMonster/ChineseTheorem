@@ -62,13 +62,19 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         {
                         
             List<ExpressionModel> tmpList = new List<ExpressionModel>();
-            //ExModelList.Clear();
 
-            await App.Database.CreateTable();
-            foreach (var a in await App.Database.GetItemsAsync())
+            try
             {
-                tmpList.Insert(0, a);
+                await App.Database.CreateTable();
+                foreach (var a in await App.Database.GetItemsAsync())
+                {
+                    tmpList.Insert(0, a);
+                }
             }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't read data from dataBase, write to developer", "OK");
+            }            
 
             if (tmpList.Count == 0)
             {

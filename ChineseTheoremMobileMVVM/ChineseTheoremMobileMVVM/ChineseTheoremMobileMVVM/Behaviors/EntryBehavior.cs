@@ -9,7 +9,7 @@ namespace ChineseTheoremMobileMVVM.Behaviors
 {
     public class EntryBehavior: Behavior<Entry>
     {
-        //private const 
+        //behavior that denies entering DOT
 
         protected override void OnAttachedTo(Entry bindable)
         {
@@ -30,8 +30,6 @@ namespace ChineseTheoremMobileMVVM.Behaviors
         {
             bindable.TextChanged -= this.bindable_TextChanged;
             base.OnDetachingFrom(bindable);            
-        }
-
-        
+        }        
     }
 }

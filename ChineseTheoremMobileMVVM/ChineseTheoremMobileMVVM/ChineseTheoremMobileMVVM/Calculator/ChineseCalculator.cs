@@ -8,7 +8,7 @@ using ChineseTheoremMobileMVVM.Models;
 namespace ChineseTheoremMobileMVVM.Calculator
 {
     //all logic here I wrote when my experience in programming was no more than two months
-    //so even I don't understand how I'm doing it
+    //so even I, don't understand how we are calculating it
 
     //some comments from when i created this code:
     /* 
@@ -218,7 +218,7 @@ namespace ChineseTheoremMobileMVVM.Calculator
 
         }
 
-        //gets two arrays of data !!!!- start count from 1, not from 0 -!!!! and max array's size 5 elements
+        //gets two arrays of data !!!!- start count from 1, not from 0 -!!!! and max array's size 5 elements - look to nsdWithMModel
         public static NsdWithMModel Count_Nsd_with_M(int[] numbers_b, int[] numbers_p)
         {
             checked
