@@ -29,7 +29,6 @@ namespace ChineseTheoremMobileMVVM
         public App()
         {
             InitializeComponent();
-
             MainPage = new ChineseTheoremMobileMVVM.Views.MainPage();
         }
 
