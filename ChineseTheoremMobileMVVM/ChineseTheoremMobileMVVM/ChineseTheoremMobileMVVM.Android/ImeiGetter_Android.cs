@@ -16,18 +16,21 @@ using ChineseTheoremMobileMVVM.Services;
 using Android.Telephony;
 using Xamarin.Forms;
 
+[assembly: Xamarin.Forms.Dependency(typeof(ImeiGetter_Android))]
 namespace ChineseTheoremMobileMVVM.Droid
 {
     public class ImeiGetter_Android :IImeiGetter
     {
         public ImeiGetter_Android() { }
+        public static string imei { get; set; }
         public string GetImei()
         {
-            Android.Telephony.TelephonyManager mTelephonyMgr;
-            //mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService);
-            mTelephonyMgr =  (TelephonyManager)Forms.Context.GetSystemService(Android.Content.Context.TelephonyService);
-            string tmp = mTelephonyMgr.DeviceId;
-            return tmp;
+            //Android.Telephony.TelephonyManager mTelephonyMgr;
+            ////mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService);
+            //mTelephonyMgr =  (TelephonyManager)Forms.Context.GetSystemService(Android.Content.Context.TelephonyService);
+            //string tmp = mTelephonyMgr.DeviceId;
+           
+            return imei;
         }
     }
 }

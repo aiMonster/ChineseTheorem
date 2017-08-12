@@ -23,11 +23,18 @@ namespace ChineseTheoremMobileMVVM.Droid
             base.OnCreate(bundle);
 
             
-
-            //Android.Telephony.TelephonyManager mTelephonyMgr;
-            //mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService); 
-            ////mTelephonyMgr = (TelephonyManager)Forms.Context.GetSystemService(Android.Content.Context.TelephonyService);
-            //string tmp = mTelephonyMgr.DeviceId;            
+            try
+            {
+                Android.Telephony.TelephonyManager mTelephonyMgr;
+                mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService);
+                ////mTelephonyMgr = (TelephonyManager)Forms.Context.GetSystemService(Android.Content.Context.TelephonyService);            
+                ImeiGetter_Android.imei = mTelephonyMgr.DeviceId;
+            }
+            catch
+            {
+                ImeiGetter_Android.imei = "phone_imei";
+            }
+            
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());

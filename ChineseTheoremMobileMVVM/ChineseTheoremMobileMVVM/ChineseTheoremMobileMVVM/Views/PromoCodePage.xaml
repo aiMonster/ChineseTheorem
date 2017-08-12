@@ -24,14 +24,14 @@
 
 
             <StackLayout VerticalOptions="End">
-                <Label Text="Transfer attempts to PromoCode:" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="Transfer points to PromoCode:" FontSize="Medium" HorizontalOptions="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Entry  WidthRequest="70" BackgroundColor="#C5CAE9" HorizontalTextAlignment="Center" IsEnabled="{Binding IsBusyInverted}" FontSize="Medium" Text="{Binding Attempts}" VerticalOptions="Center" Keyboard="Numeric">
                         <Entry.Behaviors>
                             <validation:EntryBehavior></validation:EntryBehavior>
                         </Entry.Behaviors>
                     </Entry>
-                    <Label Text=" attempts" FontSize="Medium" VerticalOptions="Center"/>
+                    <Label Text=" points" FontSize="Medium" VerticalOptions="Center"/>
                 </StackLayout>
                     <Button Text="TRANSFER" WidthRequest="130" Command="{Binding TransferCommand}" IsEnabled="{Binding IsBusyInverted}" BackgroundColor="#26A69A" FontSize="Medium" HorizontalOptions="Center"/>
                 <Label Text="{Binding GotCode}"  FontSize="Large" HorizontalOptions="Center"/>

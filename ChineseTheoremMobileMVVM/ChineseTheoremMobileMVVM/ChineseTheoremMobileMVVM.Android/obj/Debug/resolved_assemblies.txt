@@ -4,6 +4,8 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Plugin.Connectivity.Abstractions.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Plugin.Connectivity.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\Plugin.Settings.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\SQLite-net.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\SQLitePCLRaw.batteries_green.dll
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\android\assets\SQLitePCLRaw.batteries_v2.dll

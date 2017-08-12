@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         //singelton viewModel to be accessble from all pages
         private static PointsViewModel Current;
 
-        private PointsViewModel() { Points = 250; } //here we will load amount of our points
+        private PointsViewModel() { Points = CrossSettings.Current.GetValueOrDefault("PointsAmount", 0); } //here we will load amount of our points
 
         public static PointsViewModel getInstance
         {
@@ -34,9 +35,10 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             get { return points; }
             set
             {
-                points = (value >= 0) ? value : 0;                            
+                points = (value >= 0) ? value : 0;
 
                 //here we will rewrite points in file
+                CrossSettings.Current.AddOrUpdateValue("PointsAmount", points);
                 OnPropertyChanged("Points");
             }
         }

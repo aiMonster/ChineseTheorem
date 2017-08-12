@@ -24,16 +24,16 @@ namespace ChineseTheoremMobileMVVM.Services
         public async Task<string> TransferCode(int amount)
         {
             HttpClient client = GetClient();
-            //string imei = DependencyService.Get<IImeiGetter>().GetImei();
-            //await App.Current.MainPage.DisplayAlert("Our imei", imei, "ok");
-            string result = await client.GetStringAsync(Url + "/transferpromocode/" + amount + "/deimei");
+            string imei = DependencyService.Get<IImeiGetter>().GetImei();            
+            string result = await client.GetStringAsync(Url + "/transferpromocode/" + amount + "/" + imei);
             return JsonConvert.DeserializeObject<string>(result);
         }
 
         public async Task<int> ActivateCode(string promoCode)
         {
             HttpClient client = GetClient();
-            string result = await client.GetStringAsync(Url + "/activatepromocode/" + promoCode + "/deimei");
+            string imei = DependencyService.Get<IImeiGetter>().GetImei();
+            string result = await client.GetStringAsync(Url + "/activatepromocode/" + promoCode + "/" + imei);
             return JsonConvert.DeserializeObject<int>(result);
         }
     }
