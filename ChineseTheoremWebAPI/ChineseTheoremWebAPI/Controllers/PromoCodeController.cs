@@ -16,6 +16,48 @@ namespace ChineseTheoremWebAPI.Controllers
         static HttpClient client = new HttpClient();
         SqlConnection sqlConnection;
 
+
+        [HttpGet]
+        [Route("api/promocode/getinfopromocode/{promocode}")]
+        public PromoCodeModel GetInfoPromoCode(string promoCode)
+        {
+            PromoCodeModel tmpMod = new PromoCodeModel();
+            tmpMod.PromoCode = promoCode;
+            string connectionString = "Data Source=chinesetheoremserver.database.windows.net;Initial Catalog=ChineseTheoremDataBase;Integrated Security=False;User ID=ChineseTheoremAdmin;Password=Admin2017;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            SqlDataReader sqlReader = null;
+
+            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [PromoCodesTable] WHERE PromoCode='" + promoCode + "'", sqlConnection);
+            try
+            {
+                sqlReader = sqlCommand.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    tmpMod.IsUsed = Convert.ToBoolean(sqlReader["IsUsed"]);
+                    tmpMod.AmountAttempts = Convert.ToInt32(sqlReader["AmountAttempts"]);
+                    tmpMod.Date = Convert.ToString(sqlReader["Date"]);
+                    tmpMod.IMEI = Convert.ToString(sqlReader["IMEI"]);
+                    tmpMod.Id = Convert.ToInt32(sqlReader["Id"]);
+                }
+            }
+            catch
+            {
+                tmpMod.AmountAttempts = 0;
+            }
+            finally
+            {
+                if (sqlReader != null)
+                    sqlReader.Close();
+            }
+
+            return tmpMod;
+        }
+
+
+
+
         [HttpGet]
         public int ActivatePromoCode(string promoCode, string IMEI)
         {
