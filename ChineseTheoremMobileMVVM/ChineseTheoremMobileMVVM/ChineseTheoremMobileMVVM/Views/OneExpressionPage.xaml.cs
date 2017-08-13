@@ -18,9 +18,9 @@ namespace ChineseTheoremMobileMVVM.Views
         {
             InitializeComponent();
             OneExpressionViewModel viewmodel = new OneExpressionViewModel(model);
-            viewmodel.Navigation = Navigation; //to be able close that page by button
+            viewmodel.Navigation = Navigation;
             BindingContext = viewmodel;
-            editorSolution.Focused += (sender, e) => { editorSolution.Unfocus(); }; //to deny text editing
+            editorSolution.Focused += (sender, e) => { editorSolution.Unfocus(); };
         }
     }
 }

@@ -22,12 +22,11 @@ namespace ChineseTheoremMobileMVVM.Droid
 
             base.OnCreate(bundle);
 
-            
             //trying to get phone imei
             try
             {
                 Android.Telephony.TelephonyManager mTelephonyMgr;
-                mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService);                         
+                mTelephonyMgr = (Android.Telephony.TelephonyManager)GetSystemService(TelephonyService);                
                 ImeiGetter_Android.imei = mTelephonyMgr.DeviceId;
             }
             catch

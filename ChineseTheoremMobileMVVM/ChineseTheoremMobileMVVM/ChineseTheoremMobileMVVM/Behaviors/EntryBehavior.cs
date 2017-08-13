@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace ChineseTheoremMobileMVVM.Behaviors
 {
-    public class EntryBehavior: Behavior<Entry>
+    public class EntryBehavior : Behavior<Entry>
     {
         //behavior that denies entering DOT
 
@@ -20,16 +20,16 @@ namespace ChineseTheoremMobileMVVM.Behaviors
         void bindable_TextChanged(object sender, TextChangedEventArgs e)
         {
             Entry entry = (Entry)sender;
-            if(entry.Text.Contains("."))
+            if (entry.Text.Contains("."))
             {
-                entry.Text = entry.Text.Replace(".", "");                
+                entry.Text = entry.Text.Replace(".", "");
             }
         }
 
         protected override void OnDetachingFrom(Entry bindable)
         {
             bindable.TextChanged -= this.bindable_TextChanged;
-            base.OnDetachingFrom(bindable);            
-        }        
+            base.OnDetachingFrom(bindable);
+        }
     }
 }

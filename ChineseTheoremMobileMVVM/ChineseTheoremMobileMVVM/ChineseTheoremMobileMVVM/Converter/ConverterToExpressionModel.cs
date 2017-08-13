@@ -14,12 +14,12 @@ namespace ChineseTheoremMobileMVVM.Converter
     {
         public static ExpressionModel Convert(OnlyNsdModel origin, bool isItOnlyNsd)
         {
-            ExpressionModel result = new ExpressionModel();            
-            
+            ExpressionModel result = new ExpressionModel();
+
             result.status = (origin.final_status) ? "Expression made OK" : "Expression FAILED";
             result.date = DateTime.Now;
 
-            if(isItOnlyNsd)
+            if (isItOnlyNsd)
             {
                 result.condition = "a = " + origin.a + ", b = " + origin.b;
                 result.name = "Only NSD";
@@ -32,7 +32,7 @@ namespace ChineseTheoremMobileMVVM.Converter
                 result.solution += origin.nsd_solution + "NSD = " + origin.nsd + "\n\n\n" + origin.p_and_q_solution + "\n\n";
                 result.solution += "p = " + origin.p + ", q = " + origin.q;
 
-            }         
+            }
 
             return result;
         }
@@ -48,7 +48,7 @@ namespace ChineseTheoremMobileMVVM.Converter
 
             result.solution += origin.P_solution + "\n\n";
 
-            for(int i = 1; i <= origin.amountOfElements; i++)
+            for (int i = 1; i <= origin.amountOfElements; i++)
             {
                 result.solution += origin.m_solution[i] + "\n";
             }
@@ -68,7 +68,7 @@ namespace ChineseTheoremMobileMVVM.Converter
                 result.solution += origin.M_end_solution[i] + "\nM" + i + "= " + origin.M[i] + "\n\n\n";
             }
             result.solution += origin.X_solution + "\n\nX = " + origin.X;
-           
+
             return result;
         }
     }

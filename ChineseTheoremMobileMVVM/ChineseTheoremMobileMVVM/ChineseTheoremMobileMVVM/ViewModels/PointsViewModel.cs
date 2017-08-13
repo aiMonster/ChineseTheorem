@@ -17,7 +17,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         {
             //loading points from settings, if empty setting zero
             Points = CrossSettings.Current.GetValueOrDefault("PointsAmount", 0);
-        } 
+        }
 
         public static PointsViewModel getInstance
         {

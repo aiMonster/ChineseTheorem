@@ -18,7 +18,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
     {
         //ICommand
         public ICommand DecideCommand { protected set; get; }
-        
+
         public NumbersModel numbersModel { get; private set; }
 
         public DecidePandQViewModel()
@@ -46,7 +46,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 await App.Current.MainPage.DisplayAlert("Oops!", "Too big numbers in condition!", "OK");
                 return;
             }
-            
+
 
             string condition = a + "p + " + b + "q";
             bool answer = await App.Current.MainPage.DisplayAlert("Is condition correct?", condition, "It's ok", "Cancel");
@@ -88,7 +88,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't save expression to dataBase, write to developer", "OK");
                 PointsViewModel.getInstance.Points += 4;
             }
-            
+
 
             await App.Current.MainPage.DisplayAlert("Excellent!", "Expression added to History", "OK");
             Number_a = "";

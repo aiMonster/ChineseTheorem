@@ -26,7 +26,7 @@ namespace ChineseTheoremMobileMVVM.Services
         public async Task<string> TransferCode(int amount)
         {
             HttpClient client = GetClient();
-            string imei = DependencyService.Get<IImeiGetter>().GetImei();            
+            string imei = DependencyService.Get<IImeiGetter>().GetImei();
             string result = await client.GetStringAsync(Url + "/transferpromocode/" + amount + "/" + imei);
             return JsonConvert.DeserializeObject<string>(result);
         }

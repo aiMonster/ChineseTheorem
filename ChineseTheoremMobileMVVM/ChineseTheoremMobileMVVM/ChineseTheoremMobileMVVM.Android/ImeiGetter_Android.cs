@@ -25,7 +25,7 @@ namespace ChineseTheoremMobileMVVM.Droid
         public ImeiGetter_Android() { }
         public static string imei { get; set; }
         public string GetImei()
-        {          
+        {           
             return imei;
         }
     }

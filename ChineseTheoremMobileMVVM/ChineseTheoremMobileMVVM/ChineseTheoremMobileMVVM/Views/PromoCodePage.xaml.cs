@@ -18,9 +18,23 @@ namespace ChineseTheoremMobileMVVM.Views
         {
             
             PromoCodeViewModel pcv = new PromoCodeViewModel();
-            base.Appearing += (o, e) => pcv.onAppearing(); //to refresh max amount of points                      
+            base.Appearing += (o, e) => pcv.onAppearing();
+            //base.Appearing += (o, e) => this.onApp();
+                      
             BindingContext = pcv;
-            InitializeComponent();            
-        }        
+            InitializeComponent();
+            onApp();
+        }
+
+        private void onApp()
+        {
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                DisplayAlert("cai", "no internet", "ok");
+
+            }
+            else
+                DisplayAlert("is", "internet", "ok");
+        }
     }
 }

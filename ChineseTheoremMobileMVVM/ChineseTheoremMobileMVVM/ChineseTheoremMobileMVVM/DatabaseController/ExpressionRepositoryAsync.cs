@@ -23,8 +23,8 @@ namespace ChineseTheoremMobileMVVM.DatabaseController
         {
             await database.CreateTableAsync<ExpressionModel>();
         }
-        
-        public async Task <List<ExpressionModel>> GetItemsAsync()
+
+        public async Task<List<ExpressionModel>> GetItemsAsync()
         {
             return await database.Table<ExpressionModel>().ToListAsync();
 

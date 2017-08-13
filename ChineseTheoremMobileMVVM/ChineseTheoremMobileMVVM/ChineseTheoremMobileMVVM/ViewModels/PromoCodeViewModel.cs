@@ -31,7 +31,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         private bool isBusy { get; set; }
 
         PromoCodeService promoCodeService = new PromoCodeService();
-        
+
 
         public PromoCodeViewModel()
         {
@@ -45,7 +45,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             get { return isBusy; }
             set
             {
-                if(isBusy != value)
+                if (isBusy != value)
                 {
                     isBusy = value;
                     OnPropertyChanged("IsBusy");
@@ -65,13 +65,13 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             get { return gotCode; }
             set
             {
-                if(gotCode != value)
+                if (gotCode != value)
                 {
                     gotCode = value;
                     OnPropertyChanged("GotCode");
                 }
             }
-          
+
         }
 
         public string PromoCode
@@ -79,7 +79,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             get { return promoCode; }
             set
             {
-                if(promoCode != value)
+                if (promoCode != value)
                 {
                     promoCode = value;
                     OnPropertyChanged("PromoCode");
@@ -92,9 +92,9 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             get { return attempts; }
             set
             {
-                if(attempts != value)
-                {                    
-                    attempts = value;                                       
+                if (attempts != value)
+                {
+                    attempts = value;
                     OnPropertyChanged("Attempts");
                 }
             }
@@ -103,12 +103,12 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private async void Activate()
         {
-            if(String.IsNullOrEmpty(promoCode))
+            if (String.IsNullOrEmpty(promoCode))
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter promo code!", "OK");
                 return;
             }
-            else if(promoCode.Length != 8)
+            else if (promoCode.Length != 8)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Promo code has to have length of 8 characters!", "OK");
                 return;
@@ -119,24 +119,24 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'};
             bool contains = false;
             //checking is promoCode correct
-            foreach(char tmp in promoCode)
+            foreach (char tmp in promoCode)
             {
                 bool tmpB = false;
-                foreach(char ch in stuff)
+                foreach (char ch in stuff)
                 {
-                    if(tmp == ch)
+                    if (tmp == ch)
                     {
                         tmpB = true;
                         break;
                     }
                 }
-                if(!tmpB)
+                if (!tmpB)
                 {
                     contains = true;
                 }
-                    
+
             }
-            if(contains)
+            if (contains)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Promo code contains not allowed symbols!", "OK");
                 return;
@@ -167,36 +167,36 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             catch
             {
                 IsBusy = false;
-                await App.Current.MainPage.DisplayAlert("Oops!", "Something wrong while connecting the server!", "OK");                
+                await App.Current.MainPage.DisplayAlert("Oops!", "Something wrong while connecting the server!", "OK");
                 return;
             }
 
-            if(result <= 0)
+            if (result <= 0)
             {
                 IsBusy = false;
-                await App.Current.MainPage.DisplayAlert("Oops", "Promo code is incorrect or already used, try again!", "OK");                
+                await App.Current.MainPage.DisplayAlert("Oops", "Promo code is incorrect or already used, try again!", "OK");
                 return;
             }
             PointsViewModel.getInstance.Points += result;
-            PromoCode = "";            
+            PromoCode = "";
             IsBusy = false;
             Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
-            await App.Current.MainPage.DisplayAlert("Activated", "You have added " + result + " points", "OK");                  
+            await App.Current.MainPage.DisplayAlert("Activated", "You have added " + result + " points", "OK");
         }
 
         private async void Transfer()
-        {            
+        {
             if (String.IsNullOrEmpty(attempts))
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter number!", "OK");
                 return;
             }
-            else if(Convert.ToInt32(attempts) <= 0)
+            else if (Convert.ToInt32(attempts) <= 0)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter number higher than 0!", "OK");
                 return;
             }
-            else if(Convert.ToInt32(attempts) > PointsViewModel.getInstance.Points)
+            else if (Convert.ToInt32(attempts) > PointsViewModel.getInstance.Points)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "You don't have so much points, you have only " + PointsViewModel.getInstance.Points + "!", "OK");
                 return;
@@ -204,14 +204,14 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
 
             bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Do you really want to transfer " + attempts + " points?", "YES", "NO");
-            if(!answer)
+            if (!answer)
             {
                 return;
             }
 
             //checking on internet connection
             bool isConnected = CrossConnectivity.Current.IsConnected;
-            if(!isConnected)
+            if (!isConnected)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Sorry, no internet connection!", "OK");
                 return;
@@ -226,10 +226,10 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             catch
             {
                 IsBusy = false;
-                await App.Current.MainPage.DisplayAlert("Oops!", "Something wrong while connecting the server!", "OK");                
+                await App.Current.MainPage.DisplayAlert("Oops!", "Something wrong while connecting the server!", "OK");
                 return;
             }
-                     
+
             PointsViewModel.getInstance.Points -= Convert.ToInt32(attempts);
             Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
             GotCode = result;
@@ -238,7 +238,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         }
 
         public void onAppearing()
-        {           
+        {
             Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
         }
 

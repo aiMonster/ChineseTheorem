@@ -1,6 +1,0 @@
-F:\Users\User\Desktop\ChineseTheorem\ConsoleNsdWhole\ConsoleNsdWhole\bin\Debug\ConsoleNsdWhole.exe.config
-F:\Users\User\Desktop\ChineseTheorem\ConsoleNsdWhole\ConsoleNsdWhole\bin\Debug\ConsoleNsdWhole.exe
-F:\Users\User\Desktop\ChineseTheorem\ConsoleNsdWhole\ConsoleNsdWhole\bin\Debug\ConsoleNsdWhole.pdb
-F:\Users\User\Desktop\ChineseTheorem\ConsoleNsdWhole\ConsoleNsdWhole\obj\Debug\ConsoleNsdWhole.csprojResolveAssemblyReference.cache
-F:\Users\User\Desktop\ChineseTheorem\ConsoleNsdWhole\ConsoleNsdWhole\obj\Debug\ConsoleNsdWhole.exe
-F:\Users\User\Desktop\ChineseTheorem\ConsoleNsdWhole\ConsoleNsdWhole\obj\Debug\ConsoleNsdWhole.pdb

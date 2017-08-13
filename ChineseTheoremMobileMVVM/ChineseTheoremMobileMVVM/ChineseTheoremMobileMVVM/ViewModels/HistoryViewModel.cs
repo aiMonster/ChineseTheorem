@@ -15,22 +15,22 @@ using Xamarin.Forms;
 namespace ChineseTheoremMobileMVVM.ViewModels
 {
     class HistoryViewModel : INotifyPropertyChanged
-    {              
+    {
         List<ExpressionModel> exModelList { get; set; }
         private bool isEmpty { get; set; }
-   
+
         public HistoryViewModel()
         {
-            
-            exModelList = new List<ExpressionModel>();             
-        }        
+
+            exModelList = new List<ExpressionModel>();
+        }
 
         public bool IsEmpty
         {
             get { return isEmpty; }
             set
             {
-                if(isEmpty != value)
+                if (isEmpty != value)
                 {
                     isEmpty = value;
                     OnPropertyChanged("IsEmpty");
@@ -46,21 +46,21 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             }
             set
             {
-                if(exModelList != value)
+                if (exModelList != value)
                 {
-                   
+
                     exModelList = value;
                     OnPropertyChanged("ExModelList");
-                  
-                    
+
+
                 }
             }
-        }            
-          
+        }
+
 
         public async void OnAppearing(object sender, EventArgs e)
         {
-                        
+
             List<ExpressionModel> tmpList = new List<ExpressionModel>();
 
             try
@@ -74,7 +74,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             catch
             {
                 await App.Current.MainPage.DisplayAlert("Oops, something wrong!", "We couldn't read data from dataBase, write to developer", "OK");
-            }            
+            }
 
             if (tmpList.Count == 0)
             {
@@ -84,15 +84,15 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 IsEmpty = false;
             }
-            ExModelList = tmpList;   
-                 
+            ExModelList = tmpList;
+
         }
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)
-               PropertyChanged(this, new PropertyChangedEventArgs(propName));
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
     }
 }

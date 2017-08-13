@@ -27,7 +27,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             this.DeleteCommand = new Command(Delete);
             this.CloseCommand = new Command(Close);
         }
-        
+
         private void Close()
         {
             Navigation.PopModalAsync();
@@ -36,7 +36,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         private async void Delete()
         {
             bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Do you really want to delete this entry?", "Yes", "No");
-            if(!answer)
+            if (!answer)
             {
                 return;
             }

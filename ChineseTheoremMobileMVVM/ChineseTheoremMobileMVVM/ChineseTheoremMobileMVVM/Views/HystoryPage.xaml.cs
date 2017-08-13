@@ -18,12 +18,12 @@ namespace ChineseTheoremMobileMVVM.Views
         {
             
             HistoryViewModel hm = new HistoryViewModel();
-            base.Appearing +=(o,e)=> hm.OnAppearing(o, e);  //adding onAppearing event to update our list                      
+            base.Appearing +=(o,e)=> hm.OnAppearing(o, e);                        
             BindingContext = hm;
             InitializeComponent();
         }
 
-        //when item selected open this expression on new page
+
         private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)

@@ -17,19 +17,19 @@ namespace ChineseTheoremMobileMVVM.ViewModels
     {
         //ICommand
         public ICommand DecideCommand { protected set; get; }
-        
+
         public NumbersModel numbersModel { get; private set; }
 
         public DecideNsdViewModel()
         {
             numbersModel = new NumbersModel();
-            this.DecideCommand = new Command(Decide);         
+            this.DecideCommand = new Command(Decide);
         }
 
         private async void Decide()
         {
 
-            if(!isValid())
+            if (!isValid())
             {
                 return;
             }
@@ -48,13 +48,13 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
             string condition = "a = " + a + ", b = " + b;
             bool answer = await App.Current.MainPage.DisplayAlert("Is condition correct?", condition, "It's ok", "Cancel");
-            if(!answer)
+            if (!answer)
             {
                 return;
             }
 
             //if not enough points - exit
-            if(PointsViewModel.getInstance.Points < 1)
+            if (PointsViewModel.getInstance.Points < 1)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points, price of that exercise 1!", "OK");
                 return;
@@ -64,7 +64,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             OnlyNsdModel resultExpressionModel = ChineseCalculator.Count_Nsd_p_q(a, b);
             ExpressionModel toDbModel = ConverterToExpressionModel.Convert(resultExpressionModel, true);
 
-            if(resultExpressionModel.nsd_status)
+            if (resultExpressionModel.nsd_status)
             {
                 //expression decided correct
                 PointsViewModel.getInstance.Points -= 1;
@@ -97,12 +97,12 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private bool isValid()
         {
-            if(String.IsNullOrEmpty(Number_a) || String.IsNullOrEmpty(Number_b))
+            if (String.IsNullOrEmpty(Number_a) || String.IsNullOrEmpty(Number_b))
             {
                 App.Current.MainPage.DisplayAlert("Oops!", "You did'n fill all cells!", "OK");
                 return false;
             }
-            else if(Number_a == "0" || Number_b == "0")
+            else if (Number_a == "0" || Number_b == "0")
             {
                 App.Current.MainPage.DisplayAlert("Oops!", "One of numbers is equal zero!", "OK");
                 return false;
@@ -117,9 +117,9 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             get { return numbersModel.number_a; }
             set
             {
-                if(numbersModel.number_a != value)
+                if (numbersModel.number_a != value)
                 {
-                    numbersModel.number_a = value;                    
+                    numbersModel.number_a = value;
                     OnPropertyChanged("Number_a");
                 }
             }
