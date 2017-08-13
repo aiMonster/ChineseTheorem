@@ -1,0 +1,17 @@
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\AdminChineseMoblie.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\AdminChineseMoblie.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Core.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Platform.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Xaml.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Core.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Core.xml
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Platform.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Xaml.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Xamarin.Forms.Xaml.xml
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.csprojResolveAssemblyReference.cache
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.App.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.MainPage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.GetInfoPage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.GetPromoPage.xaml.g.cs
