@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AdminChineseMoblie.Views.PromoInfo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding  PromoCode, StringFormat='PromoCode: {0}'}"/>
+            <Label Text="{Binding Id, StringFormat='Id: {0}'}"/>
+            <Label Text="{Binding AmountAttempts, StringFormat='Amount: {0}'}"/>
+            <Label Text="{Binding IsUsed, StringFormat='IsUsed: {0}'}"/>
+            <Label Text="{Binding Date, StringFormat='Date: {0}'}"/>
+            <Label Text="{Binding Imei, StringFormat='IMEI: {0}'}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AdminChineseMoblie.ViewModels;
 
 namespace AdminChineseMoblie.Views
 {
@@ -15,6 +16,9 @@ namespace AdminChineseMoblie.Views
         public GetInfoPage()
         {
             InitializeComponent();
+            GetInfoViewModel model = new GetInfoViewModel();
+            model.Navigation = this.Navigation;
+            BindingContext = model;
         }
     }
 }

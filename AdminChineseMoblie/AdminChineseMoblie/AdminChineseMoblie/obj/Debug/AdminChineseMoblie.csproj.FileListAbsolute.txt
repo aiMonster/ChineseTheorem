@@ -15,3 +15,12 @@ F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\Admin
 F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.MainPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.GetInfoPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.GetPromoPage.xaml.g.cs
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Newtonsoft.Json.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Plugin.Connectivity.Abstractions.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Plugin.Connectivity.dll
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Newtonsoft.Json.xml
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Plugin.Connectivity.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Plugin.Connectivity.xml
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\bin\Debug\Plugin.Connectivity.Abstractions.xml
+F:\Users\User\Desktop\ChineseTheorem\AdminChineseMoblie\AdminChineseMoblie\AdminChineseMoblie\obj\Debug\AdminChineseMoblie.Views.PromoInfo.xaml.g.cs

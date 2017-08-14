@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AdminChineseMoblie.ViewModels;
 
 namespace AdminChineseMoblie.Views
 {
@@ -15,6 +16,7 @@ namespace AdminChineseMoblie.Views
         public GetPromoPage()
         {
             InitializeComponent();
+            BindingContext = new GetPromoViewModel();
         }
     }
 }
