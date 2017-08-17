@@ -8,7 +8,7 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <application android:label="AdminChineseMoblie.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="AdminChineseMoblie" android:theme="@style/MainTheme" android:name="md526b6f52528d6853f3b3b3b961cd14060.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="Chinese's Admin" android:theme="@style/MainTheme" android:name="md526b6f52528d6853f3b3b3b961cd14060.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
