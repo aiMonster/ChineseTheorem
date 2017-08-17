@@ -4,12 +4,12 @@
              x:Class="AdminChineseMoblie.Views.GetInfoPage"
              Title="Get info">
     <ContentPage.Content>
-        <StackLayout>
-            <ActivityIndicator IsRunning="True" Color="#01579B" IsVisible="{Binding IsBusy}"/>
-            <Label Text="Enter promo code:" HorizontalOptions="Center"/>
-            <Entry Placeholder="promoCode" Text="{Binding PromoCode}" IsEnabled="{Binding IsBusyInverted}" WidthRequest="70"/>
-            <Button Text="GetInfo" Command="{Binding GetInfoCommand}" IsEnabled="{Binding IsBusyInverted}" />
-
+        <StackLayout HorizontalOptions="Center">
+            
+            <Label Text="Enter promo code:" HorizontalOptions="Center" FontSize="Large" Margin="0,20"/>
+            <Entry Placeholder="promoCode" HorizontalTextAlignment="Center" Text="{Binding PromoCode}" IsEnabled="{Binding IsBusyInverted}" WidthRequest="70" FontSize="Medium"/>
+            <Button Text="Get Info" Command="{Binding GetInfoCommand}" IsEnabled="{Binding IsBusyInverted}" BackgroundColor="LightBlue" FontSize="Medium"/>
+            <ActivityIndicator IsRunning="True" Color="#01579B" IsVisible="{Binding IsBusy}" Margin="0,10"/>
 
 
         </StackLayout>

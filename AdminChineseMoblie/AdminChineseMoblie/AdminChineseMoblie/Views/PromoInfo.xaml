@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AdminChineseMoblie.Views.PromoInfo">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding  PromoCode, StringFormat='PromoCode: {0}'}"/>
-            <Label Text="{Binding Id, StringFormat='Id: {0}'}"/>
-            <Label Text="{Binding AmountAttempts, StringFormat='Amount: {0}'}"/>
-            <Label Text="{Binding IsUsed, StringFormat='IsUsed: {0}'}"/>
-            <Label Text="{Binding Date, StringFormat='Date: {0}'}"/>
-            <Label Text="{Binding Imei, StringFormat='IMEI: {0}'}"/>
+        <StackLayout Margin="0,20">
+            <Label Text="{Binding  PromoCode, StringFormat='PromoCode: {0}'}" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding IsUsed, StringFormat='IsUsed: {0}'}" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding AmountAttempts, StringFormat='Amount: {0}'}" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            
+            <Label Text="{Binding Id, StringFormat='Id: {0}'}" FontSize="Medium" Margin="10,30,10,0"/>
+            <Label Text="{Binding Date, StringFormat='Date: {0}'}" FontSize="Medium" Margin="10,0"/>
+            <Label Text="{Binding Imei, StringFormat='IMEI: {0}'}" FontSize="Medium" Margin="10,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
