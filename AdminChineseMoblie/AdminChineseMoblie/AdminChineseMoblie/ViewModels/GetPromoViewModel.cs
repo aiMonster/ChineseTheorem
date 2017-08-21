@@ -76,12 +76,24 @@ namespace AdminChineseMoblie.ViewModels
 
         private async void Transfer()
         {
+            int attempts_int;
             if (String.IsNullOrEmpty(attempts))
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter number!", "OK");
                 return;
             }
-            else if (Convert.ToInt32(attempts) <= 0)
+            
+            try
+            {
+                attempts_int = Convert.ToInt32(attempts);
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Oops!", "Too big number!", "OK");
+                return;
+            }
+
+            if (Convert.ToInt32(attempts_int) <= 0)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter number higher than 0!", "OK");
                 return;
@@ -106,7 +118,7 @@ namespace AdminChineseMoblie.ViewModels
             string result = "";
             try
             {
-                result = await promoCodeService.TransferCode(Convert.ToInt32(attempts));
+                result = await promoCodeService.TransferCode(attempts_int);
             }
             catch
             {
