@@ -77,7 +77,7 @@ namespace ChineseTheoremMobileMVVM.Calculator
                 model.p = p;
                 model.q = q;
                 model.nsd = nsd;
-                model.nsd_solution += ar[1] + " = " + br[1] + "*" + br[1] + " + 0";
+                model.nsd_solution += ar[1] + " = " + br[1] + "*" + br[1] + " + 0 + \n";
                 model.p_and_q_solution += "In this case expression does't exist";
 
                 //before returning checking is expression made correct

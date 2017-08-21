@@ -35,7 +35,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
         private async void Delete()
         {
-            bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Do you really want to delete this entry?", "Yes", "No");
+            bool answer = await App.Current.MainPage.DisplayAlert("Notification", "Do you really want to remove this entry?", "Yes", "No");
             if (!answer)
             {
                 return;

@@ -11,8 +11,8 @@
 namespace ChineseTheoremMobileMVVM.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheoremMobileMVVM\\ChineseTheoremMobileMVVM\\ChineseTh" +
-        "eoremMobileMVVM\\Views\\DecidePandQPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheorem\\ChineseTheoremMobileMVVM\\ChineseTheoremMobil" +
+        "eMVVM\\ChineseTheoremMobileMVVM\\Views\\DecidePandQPage.xaml")]
     public partial class DecidePandQPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

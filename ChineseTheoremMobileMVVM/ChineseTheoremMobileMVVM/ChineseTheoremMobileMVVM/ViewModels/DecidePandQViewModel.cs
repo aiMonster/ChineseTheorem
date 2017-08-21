@@ -49,7 +49,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
 
 
             string condition = a + "p + " + b + "q";
-            bool answer = await App.Current.MainPage.DisplayAlert("Is condition correct?", condition, "It's ok", "Cancel");
+            bool answer = await App.Current.MainPage.DisplayAlert("Is condition correct?", condition + "\n\nPrice: 4 points", "It's ok", "Cancel");
             if (!answer)
             {
                 return;

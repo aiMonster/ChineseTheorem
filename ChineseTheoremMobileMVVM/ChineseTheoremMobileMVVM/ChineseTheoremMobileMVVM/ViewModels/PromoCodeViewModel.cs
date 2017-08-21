@@ -113,6 +113,8 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 await App.Current.MainPage.DisplayAlert("Oops!", "Promo code has to have length of 8 characters!", "OK");
                 return;
             }
+            PromoCode = promoCode.ToLower();
+
 
             //sample of able characters
             char[] stuff = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
@@ -154,7 +156,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             bool isConnected = CrossConnectivity.Current.IsConnected;
             if (!isConnected)
             {
-                await App.Current.MainPage.DisplayAlert("Oops", "Sorry, no internet connection!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Sorry, no internet connection!", "OK");
                 return;
             }
 
@@ -174,7 +176,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             if (result <= 0)
             {
                 IsBusy = false;
-                await App.Current.MainPage.DisplayAlert("Oops", "Promo code is incorrect or already used, try again!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Promo code is incorrect or already used, try again!", "OK");
                 return;
             }
             PointsViewModel.getInstance.Points += result;
@@ -185,18 +187,31 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         }
 
         private async void Transfer()
-        {
+        {           
+
             if (String.IsNullOrEmpty(attempts))
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter number!", "OK");
                 return;
             }
-            else if (Convert.ToInt32(attempts) <= 0)
+
+            int amount_int;
+            try
+            {
+                amount_int = Convert.ToInt32(attempts);
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Oops!", "Too big number!", "OK");
+                return;
+            }
+
+            if (amount_int <= 0)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "Enter number higher than 0!", "OK");
                 return;
             }
-            else if (Convert.ToInt32(attempts) > PointsViewModel.getInstance.Points)
+            else if (amount_int > PointsViewModel.getInstance.Points)
             {
                 await App.Current.MainPage.DisplayAlert("Oops!", "You don't have so much points, you have only " + PointsViewModel.getInstance.Points + "!", "OK");
                 return;
@@ -221,7 +236,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             string result = "";
             try
             {
-                result = await promoCodeService.TransferCode(Convert.ToInt32(attempts));
+                result = await promoCodeService.TransferCode(amount_int);
             }
             catch
             {
@@ -230,7 +245,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
                 return;
             }
 
-            PointsViewModel.getInstance.Points -= Convert.ToInt32(attempts);
+            PointsViewModel.getInstance.Points -= amount_int;
             Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
             GotCode = result;
             IsBusy = false;
@@ -240,6 +255,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         public void onAppearing()
         {
             Attempts = Convert.ToString(PointsViewModel.getInstance.Points);
+            PromoCode = "";
         }
 
 

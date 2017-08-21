@@ -11,8 +11,8 @@
 namespace ChineseTheoremMobileMVVM.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheoremMobileMVVM\\ChineseTheoremMobileMVVM\\ChineseTh" +
-        "eoremMobileMVVM\\Views\\DecidePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Users\\User\\Desktop\\ChineseTheorem\\ChineseTheoremMobileMVVM\\ChineseTheoremMobil" +
+        "eMVVM\\ChineseTheoremMobileMVVM\\Views\\DecidePage.xaml")]
     public partial class DecidePage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

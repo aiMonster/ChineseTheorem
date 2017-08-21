@@ -153,7 +153,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 condition += "X ≡ " + numbers_b[i] + " mod " + numbers_p[i] + "\n";
             }
-            bool answer = await App.Current.MainPage.DisplayAlert("Is expression correct?", condition, "It's ok", "Cancel");
+            bool answer = await App.Current.MainPage.DisplayAlert("Is expression correct?", condition + "\nPrice: 15 points", "It's ok", "Cancel");
             if (!answer)
             {
                 return;

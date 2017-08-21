@@ -151,6 +151,7 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\Plugin.Connectivity.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\Plugin.Settings.Abstractions.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\Plugin.Settings.dll.mdb
+F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\SQLite-net.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\Xamarin.Forms.Core.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Release\android\assets\Xamarin.Forms.Xaml.dll.mdb

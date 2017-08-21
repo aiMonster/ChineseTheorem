@@ -2,17 +2,17 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.core\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.core\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
@@ -29,16 +29,16 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.core.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.core.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM.Android\obj\Debug\__library_projects__\Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

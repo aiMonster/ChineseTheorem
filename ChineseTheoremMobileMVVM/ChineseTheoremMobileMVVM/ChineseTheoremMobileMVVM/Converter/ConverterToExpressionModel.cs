@@ -29,7 +29,7 @@ namespace ChineseTheoremMobileMVVM.Converter
             {
                 result.condition = origin.a + "p + " + origin.b + "q";
                 result.name = "NSD, p and q";
-                result.solution += origin.nsd_solution + "NSD = " + origin.nsd + "\n\n\n" + origin.p_and_q_solution + "\n\n";
+                result.solution += origin.nsd_solution + "NSD = " + origin.nsd + "\n\n" + origin.p_and_q_solution + "\n\n";
                 result.solution += "p = " + origin.p + ", q = " + origin.q;
 
             }

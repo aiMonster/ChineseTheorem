@@ -74,7 +74,6 @@ F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobi
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Release\Xamarin.Forms.Platform.pdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Release\Xamarin.Forms.Xaml.pdb
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\bin\Release\Xamarin.Forms.Xaml.xml
-F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Release\ChineseTheoremMobileMVVM.csprojResolveAssemblyReference.cache
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Release\ChineseTheoremMobileMVVM.App.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Release\ChineseTheoremMobileMVVM.Views.OneExpressionPage.xaml.g.cs
 F:\Users\User\Desktop\ChineseTheorem\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\ChineseTheoremMobileMVVM\obj\Release\ChineseTheoremMobileMVVM.Views.DecidePage.xaml.g.cs
