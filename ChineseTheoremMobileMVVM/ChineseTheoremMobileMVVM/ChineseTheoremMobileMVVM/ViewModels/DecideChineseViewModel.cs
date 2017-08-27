@@ -19,16 +19,49 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         List<NumbersModel> dataList { get; set; }
         public ICommand DecideCommand { get; protected set; }
         public ICommand FillByRandomCommand { get; protected set; }
+        public ICommand AddRowCommand { get; protected set; }
+        public ICommand RemoveRowCommand { get; protected set; }
 
         public DecideChineseViewModel()
         {
             this.DecideCommand = new Command(Decide);
             this.FillByRandomCommand = new Command(FillByRandom);
+            this.AddRowCommand = new Command(AddRow);
+            this.RemoveRowCommand = new Command(RemoveRow);
             //adding rows to our list
             dataList = new List<NumbersModel>();
             for (int i = 1; i <= amount; i++)
             {
                 dataList.Add(new NumbersModel());
+            }
+        }
+
+        private void AddRow()
+        {
+            if(amount <= 5)
+            {
+                amount++;
+                DataList.Add(new NumbersModel());
+            }
+            else
+            {
+                App.Current.MainPage.DisplayAlert("Oops!", "Can't add anymore rows", "OK");
+            }
+            
+        }
+
+        private void RemoveRow()
+        {
+            if(amount >= 3)
+            {
+                //amount--;
+                //DataList.Remove()
+                App.Current.MainPage.DisplayAlert("Yes", "We removed", "OK");
+
+            }
+            else
+            {
+                App.Current.MainPage.DisplayAlert("Oops!", "Can't delete anymore rows", "OK");
             }
         }
 
