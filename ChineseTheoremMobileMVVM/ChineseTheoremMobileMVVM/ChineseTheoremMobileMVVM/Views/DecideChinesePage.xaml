@@ -7,9 +7,19 @@
              Title="chinese">
     
         <StackLayout VerticalOptions="FillAndExpand">
+            
+        <StackLayout Orientation="Horizontal" Margin="0,5,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="Add row" Command="{Binding AddRowCommand}" BackgroundColor="#A9FFAC"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="Remove row" Command="{Binding RemoveRowCommand}"  BackgroundColor="#FF7172"/>
+            </StackLayout>
+        </StackLayout>
 
-        <Button Text="Fill by random" Command="{Binding FillByRandomCommand}" BackgroundColor="#4DB6AC" Margin="0,5,0,0"/>
-            <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+
+        <Button Text="Fill by random" Command="{Binding FillByRandomCommand}" BackgroundColor="#4DB6AC" Margin="0,0,0,0"/>
+            <!-- <Label Text="Enter your numbers here:" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,10"/> -->
 
             <ListView x:Name="dataList" ItemsSource="{Binding DataList}" SeparatorVisibility="None" IsEnabled="False" VerticalOptions="Center" HasUnevenRows="True">
                 <ListView.ItemTemplate>

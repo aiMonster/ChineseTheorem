@@ -41,7 +41,9 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             if(amount <= 5)
             {
                 amount++;
-                DataList.Add(new NumbersModel());
+                List<NumbersModel> tmpL = new List<NumbersModel>(dataList);
+                tmpL.Add(new NumbersModel());
+                DataList = tmpL;               
             }
             else
             {
