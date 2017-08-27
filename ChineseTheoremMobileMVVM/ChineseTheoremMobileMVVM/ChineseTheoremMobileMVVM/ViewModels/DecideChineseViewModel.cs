@@ -35,14 +35,14 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         private void FillByRandom()
         {
             //we need it to avoid app stopping while ofen pressing this button
-            foreach (NumbersModel nM in dataList)
-            {
-                if (!String.IsNullOrEmpty(nM.number_a) || !String.IsNullOrEmpty(nM.number_b))
-                {
-                    App.Current.MainPage.DisplayAlert("Oops!", "Before filling by random clear all cells!", "OK");
-                    return;
-                }
-            }
+            //foreach (NumbersModel nM in dataList)
+            //{
+            //    if (!String.IsNullOrEmpty(nM.number_a) || !String.IsNullOrEmpty(nM.number_b))
+            //    {
+            //        App.Current.MainPage.DisplayAlert("Oops!", "Before filling by random clear all cells!", "OK");
+            //        return;
+            //    }
+            //}
 
 
             //our numbers
@@ -162,7 +162,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             //if not enough points - exit
             if (PointsViewModel.getInstance.Points < 15)
             {
-                await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points, price of that exercise 15!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points!", "OK");
                 return;
             }
 
@@ -225,7 +225,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             {
                 if (String.IsNullOrEmpty(nM.number_a) || String.IsNullOrEmpty(nM.number_b))
                 {
-                    App.Current.MainPage.DisplayAlert("Oops!", "You did'n fill all cells!", "OK");
+                    App.Current.MainPage.DisplayAlert("Oops!", "You didn't fill all cells!", "OK");
                     return false;
                 }
             }

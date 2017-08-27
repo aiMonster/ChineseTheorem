@@ -58,7 +58,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
             //if not enough points - exit
             if (PointsViewModel.getInstance.Points < 4)
             {
-                await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points, price of that exercise 4!", "OK");
+                await App.Current.MainPage.DisplayAlert("Oops!", "Not enough points!", "OK");
                 return;
             }
 
@@ -100,7 +100,7 @@ namespace ChineseTheoremMobileMVVM.ViewModels
         {
             if (String.IsNullOrEmpty(Number_a) || String.IsNullOrEmpty(Number_b))
             {
-                App.Current.MainPage.DisplayAlert("Oops!", "You did'n fill all cells!", "OK");
+                App.Current.MainPage.DisplayAlert("Oops!", "You didn't fill all cells!", "OK");
                 return false;
             }
             else if (Number_a == "0" || Number_b == "0")
